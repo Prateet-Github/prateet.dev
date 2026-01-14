@@ -16,8 +16,10 @@ const Navbar = () => {
 
   return (
     <header className="sticky top-0 z-50">
-      <nav className="border mx-auto max-w-6xl justify-between flex items-center p-4">
-        <span className="font-extrabold">Prateet.dev</span>
+      <nav className="border border-border mx-auto max-w-6xl justify-between flex items-center p-4">
+        <a href="/">
+          <span className="font-extrabold text-text">Prateet.dev</span>
+        </a>
         <ul className="hidden md:flex gap-6">
           {navItems.map((item) => (
             <li key={item.href}>
