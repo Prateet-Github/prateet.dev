@@ -26,7 +26,7 @@ const socialLinks = [
 export default function Footer() {
   return (
     <footer>
-      <div className="mx-auto border max-w-6xl px-4 py-10 text-center">
+      <div className="mx-auto border max-w-6xl px-4 py-6 text-center">
         {/* Social Links */}
         <nav aria-label="Footer navigation" className="mb-4">
           <ul className="flex justify-center gap-6">

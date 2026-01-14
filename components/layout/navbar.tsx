@@ -2,12 +2,13 @@
 
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
+import Link from "next/link";
 
 const navItems = [
-  { href: "#hero", label: "About" },
-  { href: "#skills", label: "Skills" },
-  { href: "#projects", label: "Projects" },
-  { href: "#contact", label: "Contact" },
+  { href: "/#hero", label: "About" },
+  { href: "/#skills", label: "Skills" },
+  { href: "/#projects", label: "Projects" },
+  { href: "/#contact", label: "Contact" },
 ];
 
 const Navbar = () => {
@@ -20,7 +21,7 @@ const Navbar = () => {
         <ul className="hidden md:flex gap-6">
           {navItems.map((item) => (
             <li key={item.href}>
-              <a href={item.href}>{item.label}</a>
+              <Link href={item.href}>{item.label}</Link>
             </li>
           ))}
         </ul>
@@ -33,9 +34,9 @@ const Navbar = () => {
         <ul className="flex absolute w-full flex-col items-center gap-4 md:hidden border-t p-4">
           {navItems.map((item) => (
             <li key={item.href}>
-              <a href={item.href} onClick={() => setIsOpen(false)}>
+              <Link href={item.href} onClick={() => setIsOpen(false)}>
                 {item.label}
-              </a>
+              </Link>
             </li>
           ))}
         </ul>
