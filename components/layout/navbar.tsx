@@ -15,7 +15,7 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50">
+    <header className="sticky top-0 z-50 bg-bg">
       <nav className="border border-border mx-auto max-w-6xl justify-between flex items-center p-4">
         <a href="/">
           <span className="font-extrabold text-text">Prateet.dev</span>
@@ -33,7 +33,7 @@ const Navbar = () => {
       </nav>
 
       {isOpen && (
-        <ul className="flex absolute w-full flex-col items-center gap-4 md:hidden border-t p-4">
+        <ul className="flex bg-bg absolute w-full flex-col items-center gap-4 md:hidden border-b border-border p-4">
           {navItems.map((item) => (
             <li key={item.href}>
               <Link href={item.href} onClick={() => setIsOpen(false)}>
