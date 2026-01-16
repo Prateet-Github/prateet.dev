@@ -26,9 +26,9 @@ const socialLinks = [
 export default function Footer() {
   return (
     <footer>
-      <div className="mx-auto border border-border max-w-6xl px-4 py-6 text-center">
+      <div className="mx-auto max-w-6xl px-4 py-6 text-center border-t border-border">
         {/* Social Links */}
-        <nav aria-label="Footer navigation" className="mb-4">
+        {/* <nav aria-label="Footer navigation" className="mb-4">
           <ul className="flex justify-center gap-6">
             {socialLinks.map((link) => (
               <li key={link.href}>
@@ -44,7 +44,7 @@ export default function Footer() {
               </li>
             ))}
           </ul>
-        </nav>
+        </nav> */}
 
         <p className="text-text-muted">
           &copy; {new Date().getFullYear()} Prateet Tiwari. All rights reserved.

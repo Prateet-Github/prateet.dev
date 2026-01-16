@@ -16,7 +16,7 @@ const Navbar = () => {
 
   return (
     <header className="sticky top-0 z-50 bg-bg">
-      <nav className="border border-border mx-auto max-w-6xl justify-between flex items-center p-4">
+      <nav className="mx-auto max-w-6xl justify-between flex items-center p-4 border-b border-border">
         <a href="/">
           <span className="font-extrabold text-text">Prateet.dev</span>
         </a>

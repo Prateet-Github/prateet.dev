@@ -104,7 +104,7 @@ const Skills = () => {
     >
       {/* Section header */}
       <header className="mb-12 text-center">
-        <h2 className="text-4xl font-bold">Skills</h2>
+        <h2 className="text-5xl font-bold">Skills</h2>
         <p className="mt-2 text-text-muted">
           Technologies and tools I use to build scalable web applications.
         </p>
