@@ -1,62 +1,95 @@
-import { Mail, Linkedin, Github, Twitter, MessageCircle } from "lucide-react";
+import { Mail, Linkedin, Github, Twitter, ArrowUpRight } from "lucide-react";
 
 const socials = [
   {
     name: "Email",
     url: "mailto:prateettiwari29@gmail.com",
-    icon: MessageCircle,
-    display: "prateettiwari29@gmail.com",
+    icon: Mail,
+    handle: "prateettiwari29@gmail.com",
+    color: "hover:text-red-400",
   },
   {
     name: "LinkedIn",
     url: "https://www.linkedin.com/in/prateet-tiwari/",
     icon: Linkedin,
-    display: "linkedin.com/in/prateet-tiwari",
+    handle: "/in/prateet-tiwari",
+    color: "hover:text-blue-400",
   },
   {
     name: "GitHub",
     url: "https://github.com/Prateet-Github",
     icon: Github,
-    display: "github.com/Prateet-Github",
+    handle: "@Prateet-Github",
+    color: "hover:text-purple-400",
   },
   {
-    name: "X",
+    name: "X (Twitter)",
     url: "https://twitter.com/Prateet29",
     icon: Twitter,
-    display: "x.com/prateet_tiwari",
+    handle: "@Prateet29",
+    color: "hover:text-sky-400",
   },
 ];
 
 const Contact = () => {
   return (
-    <section id="contact" className="mx-auto max-w-6xl px-6 py-24">
-      {/* Header */}
+    <section
+      id="contact"
+      className="px-6 py-24  relative bg-[#050505]"
+    >
+
+ <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-size-[24px_24px] pointer-events-none"></div>
+
+ <div className="mx-auto max-w-6xl relative z-10">
+       {/* --- Header --- */}
       <header className="mb-16 text-center">
-        <h2 className="text-5xl font-bold text-text">Get In Touch</h2>
-        <p className="mt-4 text-muted text-lg">
-          Have a project in mind or just want to chat? I'd love to hear from
-          you.
+        <h2 className="text-4xl md:text-5xl font-bold tracking-tight text-white mb-4">
+          Get In Touch
+        </h2>
+        <p className="text-lg text-slate-400 max-w-xl mx-auto">
+          Have a project in mind or just want to discuss distributed systems?
+          I'm always open to interesting conversations.
         </p>
       </header>
 
-      <div className="flex justify-center  gap-6">
+      {/* --- Contact Grid --- */}
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-3xl mx-auto">
         {socials.map((social) => (
-          <div
+          <a
             key={social.name}
-            className="mb-6 flex items-center gap-4 bg-text text-black p-4 rounded-full hover:scale-105 transition cursor-pointer"
+            href={social.url}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group flex items-center justify-between p-6 rounded border border-white/10 bg-[#0a0a0a] hover:bg-white/5 hover:border-white/20 transition-all duration-300"
           >
-            <social.icon className="text-primary w-10 h-10  fill-bg" />
-            {/* <a
-              href={social.url}
-              className="text-lg text-text hover:text-primary transition-colors"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              {social.display}
-            </a> */}
-          </div>
+            <div className="flex items-center gap-4">
+              {/* Icon Container */}
+              <div
+                className={`p-3 rounded bg-white/5 border border-white/5 text-slate-300 ${social.color} transition-colors`}
+              >
+                <social.icon size={24} />
+              </div>
+
+              {/* Text Info */}
+              <div className="flex flex-col">
+                <span className="text-sm text-slate-500 font-medium">
+                  {social.name}
+                </span>
+                <span className="text-base text-slate-200 font-mono group-hover:text-white transition-colors">
+                  {social.handle}
+                </span>
+              </div>
+            </div>
+
+            {/* Arrow Icon */}
+            <ArrowUpRight
+              className="text-slate-600 group-hover:text-white group-hover:-translate-y-1 group-hover:translate-x-1 transition-all duration-300"
+              size={20}
+            />
+          </a>
         ))}
       </div>
+ </div>
     </section>
   );
 };

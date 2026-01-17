@@ -52,7 +52,7 @@ const skills = [
   { name: "Git", icon: FaGit },
   { name: "Docker", icon: SiDocker },
   { name: "MongoDB", icon: SiMongodb },
-  {name:"Svelte", icon: SiSvelte},
+  { name: "Svelte", icon: SiSvelte },
 
   // ➕ Backend & APIs
   { name: "Express.js", icon: SiExpress },
@@ -100,10 +100,14 @@ const Skills = () => {
   return (
     <section
       id="skills"
-      className="mx-auto max-w-6xl py-24 text-text px-4"
+      className="py-24 text-text px-4  bg-[#050505] relative"
     >
+
+       <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-size-[24px_24px] pointer-events-none"></div>
+
       {/* Section header */}
-      <header className="mb-12 text-center">
+   <div className="relative z-10 mx-auto max-w-6xl">
+       <header className="mb-12 text-center">
         <h2 className="text-5xl font-bold">Skills</h2>
         <p className="mt-2 text-text-muted">
           Technologies and tools I use to build scalable web applications.
@@ -116,6 +120,7 @@ const Skills = () => {
           <SkillCard key={skill.name} skill={skill} />
         ))}
       </div>
+   </div>
     </section>
   );
 };

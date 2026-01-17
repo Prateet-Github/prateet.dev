@@ -15,8 +15,10 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 bg-bg">
-      <nav className="mx-auto max-w-6xl justify-between flex items-center p-4 border-b border-border">
+    <header className="sticky top-0 z-50 bg-[#050505]">
+      <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-size-[24px_24px] pointer-events-none"></div>
+
+      <nav className="mx-auto max-w-6xl justify-between flex items-center p-4 border-b border-white/5 relative z-10">
         <a href="/">
           <span className="font-extrabold text-text">Prateet.dev</span>
         </a>

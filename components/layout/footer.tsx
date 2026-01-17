@@ -25,29 +25,14 @@ const socialLinks = [
 
 export default function Footer() {
   return (
-    <footer>
-      <div className="mx-auto max-w-6xl px-4 py-6 text-center border-t border-border">
-        {/* Social Links */}
-        {/* <nav aria-label="Footer navigation" className="mb-4">
-          <ul className="flex justify-center gap-6">
-            {socialLinks.map((link) => (
-              <li key={link.href}>
-                <a
-                  href={link.href}
-                  aria-label={link.label}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="hover:text-white transition-colors"
-                >
-                  {link.icon}
-                </a>
-              </li>
-            ))}
-          </ul>
-        </nav> */}
+    <footer className="bg-[#050505] relative">
 
-        <p className="text-text-muted">
-          &copy; {new Date().getFullYear()} Prateet Tiwari. All rights reserved.
+ <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-size-[24px_24px] pointer-events-none"></div>
+
+      <div className="mx-auto max-w-6xl px-4 py-6 text-center border-t  border-white/5 relative z-10">
+        <p className="text-slate-600 text-sm font-mono">
+          © {new Date().getFullYear()} Prateet Tiwari. Built with Next.js &
+          Tailwind.
         </p>
       </div>
     </footer>
