@@ -1,13 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import {
-  ArrowRight,
-  Github,
-  Linkedin,
-  Mail,
-  Download,
-  Terminal,
-} from "lucide-react";
+import { Github, Linkedin, Mail, Download, Terminal } from "lucide-react";
 import { LucideIcon } from "lucide-react";
 
 type SocialLinkProps = {
@@ -20,10 +13,10 @@ const Hero = () => {
   return (
     <section
       id="hero"
-      className="relative min-h-[90vh] flex items-center justify-center pt-20 pb-10 bg-[#050505] border-b border-white/5"
+      className="relative min-h-[90vh] flex items-center justify-center pt-20 pb-10 bg-[#050505]"
     >
       {/* Optional: Very subtle grid background for industrial feel */}
-      <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-size-[24px_24px] pointer-events-none"></div>
+      <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-size-[24px_24px] pointer-events-none" />
 
       <div className="max-w-6xl mx-auto px-6 w-full grid md:grid-cols-2 gap-12 items-center relative z-10">
         {/* === Left Column: Text Content === */}
@@ -80,7 +73,7 @@ const Hero = () => {
           </div>
 
           {/* Social Links */}
-          <div className="flex justify-center md:justify-start lg:justify-start  items-center gap-8 pt-4 border-t border-white/5 mt-4">
+          <div className="flex justify-center md:justify-start lg:justify-start  items-center gap-8 pt-4 mt-4">
             <SocialLink
               href="https://github.com/Prateet-Github"
               icon={Github}

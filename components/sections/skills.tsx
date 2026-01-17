@@ -98,29 +98,25 @@ const skills = [
 
 const Skills = () => {
   return (
-    <section
-      id="skills"
-      className="py-24 text-text px-4  bg-[#050505] relative"
-    >
-
-       <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-size-[24px_24px] pointer-events-none"></div>
+    <section id="skills" className="py-24 text-text px-4 bg-[#050505] relative">
+      <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-size-[24px_24px] pointer-events-none"/>
 
       {/* Section header */}
-   <div className="relative z-10 mx-auto max-w-6xl">
-       <header className="mb-12 text-center">
-        <h2 className="text-5xl font-bold">Skills</h2>
-        <p className="mt-2 text-text-muted">
-          Technologies and tools I use to build scalable web applications.
-        </p>
-      </header>
+      <div className="relative z-10 mx-auto max-w-6xl">
+        <header className="mb-12 text-center">
+          <h2 className="text-5xl font-bold">Skills</h2>
+          <p className="mt-2 text-text-muted">
+            Technologies and tools I use to build scalable web applications.
+          </p>
+        </header>
 
-      {/* Skills grid */}
-      <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5">
-        {skills.map((skill) => (
-          <SkillCard key={skill.name} skill={skill} />
-        ))}
+        {/* Skills grid */}
+        <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5">
+          {skills.map((skill) => (
+            <SkillCard key={skill.name} skill={skill} />
+          ))}
+        </div>
       </div>
-   </div>
     </section>
   );
 };

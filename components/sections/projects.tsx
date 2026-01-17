@@ -36,20 +36,22 @@ const Projects = () => {
   return (
     <section
       id="projects"
-      className="min-h-screen py-24 px-6 relative bg-[#050505] border-t border-white/5"
+      className="min-h-screen py-24 px-6 relative bg-[#050505]"
     >
       {/* --- Industrial Grid Background --- */}
-      <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-size-[24px_24px] pointer-events-none"></div>
+      <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-size-[24px_24px] pointer-events-none" />
 
       <div className="mx-auto max-w-6xl relative z-10">
-        
         {/* --- Header --- */}
         <header className="mb-20 text-center">
           <h2 className="text-4xl md:text-5xl font-bold tracking-tight text-white mb-6">
             Featured Projects
           </h2>
           <p className="text-xl text-slate-400 max-w-2xl mx-auto leading-relaxed">
-            Selected work focusing on <span className="text-slate-200">distributed systems</span>, <span className="text-slate-200">developer tooling</span>, and <span className="text-slate-200">full-stack architecture</span>.
+            Selected work focusing on{" "}
+            <span className="text-slate-200">distributed systems</span>,{" "}
+            <span className="text-slate-200">developer tooling</span>, and{" "}
+            <span className="text-slate-200">full-stack architecture</span>.
           </p>
         </header>
 
@@ -73,7 +75,6 @@ const Projects = () => {
             <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
           </Link>
         </div>
-
       </div>
     </section>
   );

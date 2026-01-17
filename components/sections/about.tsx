@@ -20,10 +20,10 @@ const About = () => {
   return (
     <section
       id="about"
-      className="min-h-screen py-24 px-6 relative bg-[#050505] overflow-hidden border-t border-white/5"
+      className="min-h-screen py-24 px-6 relative bg-[#050505] overflow-hidden"
     >
       {/* --- Industrial Grid Background --- */}
-      <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-size-[24px_24px] pointer-events-none"></div>
+      <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-size-[24px_24px] pointer-events-none" />
 
       <div className="relative z-10 mx-auto max-w-6xl">
         {/* --- Header --- */}
@@ -125,7 +125,7 @@ const About = () => {
         </div>
 
         {/* --- GitHub Activity Section --- */}
-        <div className="space-y-8 border-t border-white/5 pt-12">
+        <div className="space-y-8  pt-12">
           <div className="flex items-center justify-between">
             <h3 className="text-2xl font-bold text-white flex items-center gap-3">
               <div className="p-2 rounded bg-white/5 border border-white/10">

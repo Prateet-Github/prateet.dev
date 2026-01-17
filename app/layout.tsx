@@ -16,6 +16,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className="bg-bg text-text antialiased">
+        
         <Navbar />
         {children}
         <Footer/>

@@ -25,7 +25,7 @@ const GithubCard = () => {
   };
 
   return (
-    <article className="w-full max-w-4xl mx-auto bg-black p-6 rounded-lg border border-white/10">
+    <article className="w-full max-w-4xl mx-auto bg-black p-6 rounded-lg border border-white/10 shadow-lg">
       <header className="mb-8">
         <h2 className="text-2xl font-bold text-white mb-2">
           GitHub Contributions
