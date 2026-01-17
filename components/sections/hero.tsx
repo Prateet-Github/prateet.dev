@@ -13,7 +13,7 @@ const Hero = () => {
   return (
     <section
       id="hero"
-      className="relative min-h-[90vh] flex items-center justify-center pt-20 pb-10 bg-[#050505]"
+      className="relative min-h-[90vh] flex items-center justify-center pt-20 pb-10"
     >
       {/* Optional: Very subtle grid background for industrial feel */}
       <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-size-[24px_24px] pointer-events-none" />
@@ -106,7 +106,7 @@ const Hero = () => {
               />
 
               {/* Minimalist Floating Badge */}
-              <div className="absolute bottom-4 left-4 right-4 p-3 bg-[#050505]/90 backdrop-blur-sm border border-white/10 rounded flex items-center gap-3">
+              <div className="absolute bottom-4 left-4 right-4 p-3 bg-bg/90 backdrop-blur-sm border border-white/10 rounded flex items-center gap-3">
                 <div className="p-2 bg-white/5 rounded border border-white/5">
                   <Terminal className="w-4 h-4 text-slate-300" />
                 </div>

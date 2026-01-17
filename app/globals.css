@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 @theme inline {
-  --color-bg: #0b0b0b;      
+  --color-bg: #050505;      
   --color-surface: #141414; 
   --color-surface-2: #1c1c1c; /* hover / elevated */
   --color-text: #e6e6e6;     

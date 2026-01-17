@@ -15,7 +15,7 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 bg-[#050505]">
+    <header className="sticky top-0 z-50 shadow-sm backdrop-blur-md">
       <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-size-[24px_24px] pointer-events-none" />
 
       <nav className="mx-auto max-w-6xl justify-between flex items-center p-4 relative z-10">

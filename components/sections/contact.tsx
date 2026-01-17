@@ -33,7 +33,7 @@ const socials = [
 
 const Contact = () => {
   return (
-    <section id="contact" className="px-6 py-24 relative bg-[#050505]">
+    <section id="contact" className="px-6 py-24 relative">
       <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-size-[24px_24px] pointer-events-none" />
 
       <div className="mx-auto max-w-6xl relative z-10">
