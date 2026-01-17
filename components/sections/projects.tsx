@@ -6,13 +6,13 @@ import { MoveRight } from "lucide-react";
 
 const projects = [
   {
-    title: "GetRides",
+    title: "Authly SDK",
     description:
-      "A ride-hailing platform with real-time tracking and seamless booking experience for users and drivers.",
-    tech: ["React", "Node.js", "MongoDB", "Express", "WebSockets"],
-    live: "https://smartbuy.vercel.app",
-    repo: "https://github.com/Prateet-Github/smartbuy",
-    image: "/demo.png",
+      "A developer-first authentication SDK for building secure and scalable auth systems.",
+    tech: ["Node.js", "TypeScript", "NPM", "JWT"],
+    live: "https://authly-eight.vercel.app",
+    repo: "https://github.com/Prateet-Github/authly-sdk",
+    image: "/authly.png",
   },
   {
     title: "SmartBuy",
@@ -21,7 +21,7 @@ const projects = [
     tech: ["React", "Node.js", "MongoDB", "Tailwind CSS"],
     live: "#",
     repo: "#",
-    image: "/demo.png",
+    image: "/smartbuy.png",
   },
   {
     title: "MyMap",

@@ -75,7 +75,7 @@ const Hero = () => {
           </div>
 
           {/* Social Links */}
-          <div className="flex items-center gap-6 mt-4 pt-8 border-t border-white/5">
+          <div className="flex items-center gap-6 mt-4 pt-8">
             {/* <SocialLink
               href="https://github.com/Prateet-Github"
               icon={Github}
