@@ -1,37 +1,41 @@
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowRight, Github, Linkedin, Mail, Download } from "lucide-react";
+import {
+  ArrowRight,
+  Github,
+  Linkedin,
+  Mail,
+  Download,
+  Terminal,
+} from "lucide-react";
+import { LucideIcon } from "lucide-react";
+
+type SocialLinkProps = {
+  href: string;
+  icon: LucideIcon;
+  label: string;
+};
 
 const Hero = () => {
   return (
     <section
       id="hero"
-      className="relative min-h-[90h] flex items-center justify-center overflow-hidden pt-20 pb-10"
+      className="relative min-h-[90vh] flex items-center justify-center pt-20 pb-10 bg-[#050505] border-b border-white/5"
     >
-      {/* --- Background Ambient Glow --- */}
-      {/* <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-indigo-600/10 rounded-full blur-[100px] pointer-events-none" />
-      <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-purple-600/10 rounded-full blur-[100px] pointer-events-none" /> */}
+      {/* Optional: Very subtle grid background for industrial feel */}
+      <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-size-[24px_24px] pointer-events-none"></div>
 
       <div className="max-w-6xl mx-auto px-6 w-full grid md:grid-cols-2 gap-12 items-center relative z-10">
         {/* === Left Column: Text Content === */}
-        <div className="flex flex-col gap-6 md:gap-8 order-2 md:order-1">
-          {/* Status Badge */}
-          {/* <div className="inline-flex items-center self-start gap-2 px-3 py-1.5 rounded-full border border-emerald-500/20 bg-emerald-500/5 text-emerald-400 text-xs font-medium tracking-wide uppercase">
-            <span className="relative flex h-2 w-2">
-              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
-              <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
-            </span>
-            Available for New Projects
-          </div> */}
-
+        <div className="flex flex-col gap-8 order-2 md:order-1">
           {/* Headlines */}
-          <div className="space-y-2">
-            <h2 className="text-lg md:text-xl font-medium text-slate-400">
-              Hello, I'm <span className="text-slate-200">Prateet Tiwari</span>
+          <div className="space-y-4">
+            <h2 className="text-lg font-medium text-slate-400 flex items-center gap-2">
+              Hello, I'm <span className="text-white">Prateet Tiwari</span>
             </h2>
-            <h1 className="text-5xl md:text-7xl font-extrabold tracking-tight text-white leading-[1.1]">
+            <h1 className="text-5xl md:text-7xl font-bold tracking-tighter text-white leading-[1.1]">
               Building <br />
-              <span className="">Scalable Systems</span>
+              <span className="text-slate-300">Scalable Systems.</span>
             </h1>
           </div>
 
@@ -48,26 +52,27 @@ const Hero = () => {
               real-time infrastructure
             </span>
             , and developer tooling like the{" "}
-            <span className="text-indigo-400 hover:underline cursor-pointer">
+            <span className="text-white border-b border-slate-700 hover:border-white transition-colors cursor-pointer">
               Authly SDK
             </span>
             .
           </p>
 
           {/* CTA Buttons */}
-          <div className="flex flex-wrap items-center gap-4 mt-2">
+          <div className="flex flex-wrap items-center gap-4">
             <Link
               href="#projects"
-              className="px-8 py-4 rounded-lg bg-white text-black font-bold hover:bg-slate-200 transition-all flex items-center gap-2"
+              className="px-8 py-4 rounded bg-white text-black font-semibold hover:bg-slate-200 transition-colors flex items-center gap-2"
             >
               View My Work
               <ArrowRight className="w-4 h-4" />
             </Link>
 
             <a
-              href="/resume.pdf" // Ensure you have this file in /public
+              href="/resume.pdf"
               target="_blank"
-              className="px-8 py-4 rounded-lg border border-white/10 bg-white/5 text-white font-medium hover:bg-white/10 transition-all flex items-center gap-2"
+              rel="noopener noreferrer"
+              className="px-8 py-4 rounded border border-white/10 bg-transparent text-white font-medium hover:bg-white/5 transition-colors flex items-center gap-2"
             >
               <Download className="w-4 h-4" />
               Resume
@@ -75,8 +80,8 @@ const Hero = () => {
           </div>
 
           {/* Social Links */}
-          <div className="flex items-center gap-6 mt-4 pt-8">
-            {/* <SocialLink
+          <div className="flex items-center gap-8 pt-4 border-t border-white/5 mt-4">
+            <SocialLink
               href="https://github.com/Prateet-Github"
               icon={Github}
               label="GitHub"
@@ -90,34 +95,33 @@ const Hero = () => {
               href="mailto:prateettiwari29@gmail.com"
               icon={Mail}
               label="Email"
-            /> */}
+            />
           </div>
         </div>
 
         {/* === Right Column: Image === */}
         <div className="relative order-1 md:order-2 flex justify-center md:justify-end">
-          {/* Glowing Card Effect */}
           <div className="relative w-72 h-72 md:w-96 md:h-96">
-            {/* <div className="absolute inset-0 bg-linear-to-tr from-purple-500 to-indigo-500 rounded-2xl blur-2xl opacity-40 animate-pulse"></div> */}
-            <div className="relative h-full w-full rounded-2xl border border-white/10 bg-[#0a0a0a] overflow-hidden shadow-2xl">
+            {/* Clean, sharp border instead of glow */}
+            <div className="relative h-full w-full rounded-xl border border-white/10 bg-[#0a0a0a] overflow-hidden">
               <Image
                 src="/demo.png"
                 alt="Prateet Tiwari"
                 fill
-                className="object-cover hover:scale-105 transition-transform duration-500"
+                className="object-cover grayscale hover:grayscale-0 transition-all duration-500"
                 priority
               />
 
-              {/* Optional: Floating Badge on Image */}
-              <div className="absolute bottom-4 left-4 right-4 p-3 bg-black/60 backdrop-blur-md border border-white/10 rounded-lg flex items-center gap-3">
-                <div className="p-2 bg-indigo-500/20 rounded-md border border-indigo-500/30">
-                  <Github className="w-5 h-5 text-indigo-400" />
+              {/* Minimalist Floating Badge */}
+              <div className="absolute bottom-4 left-4 right-4 p-3 bg-[#050505]/90 backdrop-blur-sm border border-white/10 rounded flex items-center gap-3">
+                <div className="p-2 bg-white/5 rounded border border-white/5">
+                  <Terminal className="w-4 h-4 text-slate-300" />
                 </div>
                 <div>
-                  <div className="text-xs text-slate-400 uppercase font-bold tracking-wider">
+                  <div className="text-[10px] text-slate-500 uppercase font-bold tracking-wider">
                     Current Focus
                   </div>
-                  <div className="text-sm font-medium text-white">
+                  <div className="text-sm font-medium text-slate-200">
                     Authly SDK v1.0
                   </div>
                 </div>
@@ -130,17 +134,20 @@ const Hero = () => {
   );
 };
 
-// Helper Component for Social Icons
-// const SocialLink = ({ href, icon: Icon, label }) => (
-//   <a
-//     href={href}
-//     target="_blank"
-//     rel="noreferrer"
-//     className="group flex items-center gap-2 text-slate-500 hover:text-indigo-400 transition-colors"
-//   >
-//     <Icon className="w-5 h-5 group-hover:scale-110 transition-transform" />
-//     <span className="hidden md:inline text-sm font-medium">{label}</span>
-//   </a>
-// );
+// Clean, minimal social link component
+
+const SocialLink = ({ href, icon: Icon, label }: SocialLinkProps) => {
+  return (
+    <a
+      href={href}
+      target="_blank"
+      rel="noreferrer"
+      className="group flex items-center gap-2 text-slate-500 hover:text-white transition-colors"
+    >
+      <Icon className="w-5 h-5" />
+      <span className="hidden md:inline text-sm font-medium">{label}</span>
+    </a>
+  );
+};
 
 export default Hero;
