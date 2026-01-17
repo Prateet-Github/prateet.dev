@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { Github, Linkedin, Mail, Download, Terminal } from "lucide-react";
+import { Github, Linkedin, Mail, Download } from "lucide-react";
 import { LucideIcon } from "lucide-react";
 
 type SocialLinkProps = {
@@ -98,27 +98,12 @@ const Hero = () => {
             {/* Clean, sharp border instead of glow */}
             <div className="relative h-full w-full rounded-xl border border-white/10 bg-[#0a0a0a] overflow-hidden">
               <Image
-                src="/demo.png"
+                src="/pfp.jpg"
                 alt="Prateet Tiwari"
                 fill
                 className="object-cover grayscale hover:grayscale-0 transition-all duration-500"
                 priority
               />
-
-              {/* Minimalist Floating Badge */}
-              <div className="absolute bottom-4 left-4 right-4 p-3 bg-bg/90 backdrop-blur-sm border border-white/10 rounded flex items-center gap-3">
-                <div className="p-2 bg-white/5 rounded border border-white/5">
-                  <Terminal className="w-4 h-4 text-slate-300" />
-                </div>
-                <div>
-                  <div className="text-[10px] text-slate-500 uppercase font-bold tracking-wider">
-                    Current Focus
-                  </div>
-                  <div className="text-sm font-medium text-slate-200">
-                    Authly SDK v1.0
-                  </div>
-                </div>
-              </div>
             </div>
           </div>
         </div>

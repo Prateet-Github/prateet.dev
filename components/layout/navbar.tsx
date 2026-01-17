@@ -25,7 +25,9 @@ const Navbar = () => {
         <ul className="hidden md:flex gap-6">
           {navItems.map((item) => (
             <li key={item.href}>
-              <Link href={item.href}>{item.label}</Link>
+              <Link href={item.href} className="hover:text-gray-300">
+                {item.label}
+              </Link>
             </li>
           ))}
         </ul>
@@ -35,7 +37,7 @@ const Navbar = () => {
       </nav>
 
       {isOpen && (
-        <ul className="flex bg-bg absolute w-full flex-col items-center gap-4 md:hidden border-b border-border p-4">
+        <ul className="flex bg-bg  absolute w-full flex-col items-center gap-4 md:hidden border-b border-border p-4">
           {navItems.map((item) => (
             <li key={item.href}>
               <Link href={item.href} onClick={() => setIsOpen(false)}>

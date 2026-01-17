@@ -10,9 +10,9 @@ const socials = [
   },
   {
     name: "LinkedIn",
-    url: "https://www.linkedin.com/in/prateet-tiwari/",
+    url: "https://www.linkedin.com/in/prateet-tiwari",
     icon: Linkedin,
-    handle: "/in/prateet-tiwari",
+    handle: "@prateet-tiwari",
     color: "hover:text-blue-400",
   },
   {
@@ -24,9 +24,9 @@ const socials = [
   },
   {
     name: "X (Twitter)",
-    url: "https://twitter.com/Prateet29",
+    url: "https://twitter.com/prateet_tiwarii",
     icon: Twitter,
-    handle: "@Prateet29",
+    handle: "@prateet_tiwarii",
     color: "hover:text-sky-400",
   },
 ];
