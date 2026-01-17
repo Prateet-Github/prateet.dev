@@ -30,10 +30,10 @@ const GithubCard = () => {
         <h2 className="text-2xl font-bold text-white mb-2">
           GitHub Contributions
         </h2>
-        <div className="h-0.5 w-full bg-linear-to-r from-purple-600 to-pink-600"></div>
+        {/* <div className="h-0.5 w-full bg-linear-to-r from-purple-600 to-pink-600"></div> */}
       </header>
 
-      <div className="w-full overflow-x-auto pb-4 scrollbar-hide min-h-38">
+      <div className="w-full overflow-x-auto pb-4 scrollbar-hide min-h-38 grayscale hover:grayscale-0 transition-all duration-300">
         {/* 3. Render directly (No mounted checks needed) */}
         <GitHubCalendar
           username="Prateet-Github"

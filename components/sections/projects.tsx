@@ -34,10 +34,7 @@ const projects = [
 
 const Projects = () => {
   return (
-    <section
-      id="projects"
-      className="min-h-screen py-24 px-6 relative"
-    >
+    <section id="projects" className="min-h-screen py-24 px-6 relative">
       {/* --- Industrial Grid Background --- */}
       <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-size-[24px_24px] pointer-events-none" />
 
@@ -69,7 +66,7 @@ const Projects = () => {
           <Link
             href="https://github.com/Prateet-Github"
             target="_blank"
-            className="group flex items-center gap-2 text-slate-400 hover:text-white transition-colors border-b border-transparent hover:border-white pb-0.5"
+            className="group flex items-center gap-2 text-slate-400 hover:text-white transition-colors  pb-0.5"
           >
             View more on GitHub
             <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />

@@ -12,7 +12,7 @@ type Project = {
 
 const ProjectCard = ({ project }: { project: Project }) => {
   return (
-    <article className="mt-10 h-full flex flex-col border border-border bg-surface rounded-2xl overflow-hidden transition-transform md:hover:bg-surface-2 md:hover:scale-102">
+    <article className="mt-10 grayscale hover:grayscale-0  h-full flex flex-col border border-border bg-surface rounded-2xl overflow-hidden transition-transform md:hover:bg-surface-2 md:hover:scale-102">
       {/* Project Image */}
       <Image
         src={project.image}
