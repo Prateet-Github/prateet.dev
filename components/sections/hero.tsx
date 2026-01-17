@@ -59,17 +59,17 @@ const Hero = () => {
           </p>
 
           {/* CTA Buttons */}
-          <div className="flex flex-wrap items-center gap-4">
+          <div className="flex justify-center md:justify-start lg:justify-start  items-center gap-4">
             <Link
-              href="#projects"
-              className="px-8 py-4 rounded bg-white text-black font-semibold hover:bg-slate-200 transition-colors flex items-center gap-2"
+              href="https://github.com/Prateet-Github"
+              className="px-8 py-4 rounded bg-gray-300 text-black font-semibold hover:bg-slate-200 transition-colors flex items-center gap-2"
             >
-              View My Work
-              <ArrowRight className="w-4 h-4" />
+              Github
+              <Github className="w-4 h-4 fill-bg" />
             </Link>
 
             <a
-              href="/resume.pdf"
+              href="/Prateet Tiwari.pdf"
               target="_blank"
               rel="noopener noreferrer"
               className="px-8 py-4 rounded border border-white/10 bg-transparent text-white font-medium hover:bg-white/5 transition-colors flex items-center gap-2"
@@ -80,7 +80,7 @@ const Hero = () => {
           </div>
 
           {/* Social Links */}
-          <div className="flex items-center gap-8 pt-4 border-t border-white/5 mt-4">
+          <div className="flex justify-center md:justify-start lg:justify-start  items-center gap-8 pt-4 border-t border-white/5 mt-4">
             <SocialLink
               href="https://github.com/Prateet-Github"
               icon={Github}
@@ -100,7 +100,7 @@ const Hero = () => {
         </div>
 
         {/* === Right Column: Image === */}
-        <div className="relative order-1 md:order-2 flex justify-center md:justify-end">
+        <div className="relative hidden order-1 md:order-2 md:flex lg:flex justify-center md:justify-end">
           <div className="relative w-72 h-72 md:w-96 md:h-96">
             {/* Clean, sharp border instead of glow */}
             <div className="relative h-full w-full rounded-xl border border-white/10 bg-[#0a0a0a] overflow-hidden">
