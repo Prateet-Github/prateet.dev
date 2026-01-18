@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { Github, Linkedin, Mail, Download } from "lucide-react";
+import { Github, Linkedin, Mail, Download, Twitter } from "lucide-react";
 import { LucideIcon } from "lucide-react";
 
 type SocialLinkProps = {
@@ -13,7 +13,7 @@ const Hero = () => {
   return (
     <section
       id="hero"
-      className="relative min-h-[90vh] flex items-center justify-center pt-20 pb-10"
+      className="relative min-h-[90vh] flex items-center justify-center pt-10 pb-10"
     >
       {/* Optional: Very subtle grid background for industrial feel */}
       <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-size-[24px_24px] pointer-events-none" />
@@ -24,7 +24,7 @@ const Hero = () => {
           {/* Headlines */}
           <div className="space-y-4">
             <h2 className="text-lg font-medium text-slate-400 flex items-center gap-2">
-              Hello, I'm <span className="text-white">Prateet Tiwari</span>
+              Hello, I'm <span className="text-white">Prateet Tiwari !</span>
             </h2>
             <h1 className="text-5xl md:text-7xl font-bold tracking-tighter text-white leading-[1.1]">
               Building <br />
@@ -34,28 +34,27 @@ const Hero = () => {
 
           {/* Description */}
           <p className="text-lg text-slate-400 leading-relaxed max-w-xl">
-            A 21-year-old Full-Stack Engineer based in Delhi. I specialize in
+            Full-stack engineer based in Delhi, India. Focused on building
             <span className="text-slate-200 font-medium">
               {" "}
-              distributed architecture
+              Scalable Backend Systems
             </span>
             ,
             <span className="text-slate-200 font-medium">
               {" "}
-              real-time infrastructure
+              Real-Time Applications
             </span>
-            , and developer tooling like the{" "}
-            <span className="text-white border-b border-slate-700 hover:border-white transition-colors cursor-pointer">
-              Authly SDK
-            </span>
-            .
+            , and{" "}
+            <span className="text-white font-medium">Developer Tools</span>.
           </p>
 
           {/* CTA Buttons */}
           <div className="flex justify-center md:justify-start lg:justify-start  items-center gap-4">
             <Link
               href="https://github.com/Prateet-Github"
-              className="px-8 py-4 rounded bg-gray-300 text-black font-semibold hover:bg-slate-200 transition-colors flex items-center gap-2"
+              className="px-8 py-4 rounded bg-slate-300 text-black font-bold hover:bg-white/90 transition-colors flex items-center gap-2"
+              target="_blank"
+              rel="noopener noreferrer"
             >
               Github
               <Github className="w-4 h-4 fill-bg" />
@@ -65,7 +64,7 @@ const Hero = () => {
               href="/Prateet Tiwari.pdf"
               target="_blank"
               rel="noopener noreferrer"
-              className="px-8 py-4 rounded border border-white/10 bg-transparent text-white font-medium hover:bg-white/5 transition-colors flex items-center gap-2"
+              className="px-8 py-4 rounded border border-white/10 bg-bg text-white font-bold hover:bg-surface transition-colors flex items-center gap-2"
             >
               <Download className="w-4 h-4" />
               Resume
@@ -75,11 +74,6 @@ const Hero = () => {
           {/* Social Links */}
           <div className="flex justify-center md:justify-start lg:justify-start  items-center gap-8 pt-4 mt-4">
             <SocialLink
-              href="https://github.com/Prateet-Github"
-              icon={Github}
-              label="GitHub"
-            />
-            <SocialLink
               href="https://linkedin.com/in/prateet-tiwari"
               icon={Linkedin}
               label="LinkedIn"
@@ -88,6 +82,11 @@ const Hero = () => {
               href="mailto:prateettiwari29@gmail.com"
               icon={Mail}
               label="Email"
+            />
+            <SocialLink
+              href="https://x.com/prateet_tiwarii"
+              icon={Twitter}
+              label="X (Twitter)"
             />
           </div>
         </div>
@@ -101,7 +100,7 @@ const Hero = () => {
                 src="/pfp.jpg"
                 alt="Prateet Tiwari"
                 fill
-                className="object-cover grayscale hover:grayscale-0 transition-all duration-500"
+                className="object-cover grayscale hover:grayscale-0 transition-all duration-500 hover:scale-102"
                 priority
               />
             </div>
@@ -120,7 +119,7 @@ const SocialLink = ({ href, icon: Icon, label }: SocialLinkProps) => {
       href={href}
       target="_blank"
       rel="noreferrer"
-      className="group flex items-center gap-2 text-slate-500 hover:text-white transition-colors"
+      className="group flex items-center gap-2 text-slate-500 hover:text-white/80 transition-colors"
     >
       <Icon className="w-5 h-5" />
       <span className="hidden md:inline text-sm font-medium">{label}</span>
