@@ -15,6 +15,8 @@ export default function SmoothScrollProvider({
       smoothWheel: true,
     });
 
+       (window as any).lenis = lenis;
+
     let rafId: number;
 
     const raf = (time: number) => {
