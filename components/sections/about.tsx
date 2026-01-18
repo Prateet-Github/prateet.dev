@@ -32,8 +32,8 @@ const About = () => {
             About Me
           </h2>
           <p className="text-xl text-slate-400 max-w-2xl mx-auto leading-relaxed">
-            I'm Prateet Tiwari, a Full-Stack Engineer based in Delhi. I don't
-            just write code; I architect scalable, real-time systems.
+            I focus on building systems that are reliable, performant, and easy
+            to reason about.
           </p>
         </header>
 
@@ -50,35 +50,36 @@ const About = () => {
 
             <div className="text-slate-400 leading-relaxed space-y-6 text-lg">
               <p>
-                My journey started with a curiosity about how the internet
-                works, which quickly evolved into a passion for{" "}
+                My interest in engineering started with a curiosity about how
+                the internet works and gradually evolved into a focus on{" "}
                 <strong className="text-slate-200 font-medium">
-                  distributed systems
+                  backend systems
                 </strong>{" "}
                 and
                 <strong className="text-slate-200 font-medium">
                   {" "}
-                  backend infrastructure
+                  distributed architecture.
                 </strong>
                 .
               </p>
 
               <p>
-                I specialize in the MERN stack but focus heavily on the
-                "invisible" parts of software:
+                While I primarily work with the MERN stack, I’m most interested
+                in the invisible parts of
                 <strong className="text-slate-200 font-medium">
                   {" "}
-                  latency, security, and scalability
+                  software-latency, security, and scalability
                 </strong>
-                . Whether it's building a custom auth SDK like{" "}
-                <em className="text-white not-italic">Authly</em> or optimizing
-                WebRTC streams, I love solving hard engineering problems.
+                . I enjoy building systems that perform reliably under
+                real-world constraints, whether that's developer tool like{" "}
+                <em className="text-white not-italic">Authly </em>or designing
+                backend services that scale predictably.
               </p>
 
               <p>
-                When I'm not coding, you can find me exploring new system design
-                patterns, contributing to open source, or optimizing my Vim
-                configuration.
+                Outside of active development, I spend time studying system
+                design patterns, contributing to open source, and refining my
+                development workflow.
               </p>
             </div>
           </div>
@@ -97,7 +98,7 @@ const About = () => {
               <SkillCard
                 icon={Layout}
                 title="Frontend"
-                skills={["React", "Next.js", "TypeScript", "Tailwind", "Redux"]}
+                skills={["React", "Next.js", "Svelte", "Typescript", "Redux"]}
               />
 
               {/* Skill Group: Backend */}
@@ -118,14 +119,21 @@ const About = () => {
               <SkillCard
                 icon={GitBranch}
                 title="DevOps"
-                skills={["Docker", "Git", "CI/CD", "Linux", "AWS"]}
+                skills={[
+                  "Docker",
+                  "Git",
+                  "CI/CD",
+                  "Netlify",
+                  "Vercel",
+                  "Render",
+                ]}
               />
             </div>
           </div>
         </div>
 
         {/* --- GitHub Activity Section --- */}
-        <div className="space-y-8  pt-12">
+        <div className="space-y-8">
           <div className="flex items-center justify-between">
             <h3 className="text-2xl font-bold text-white flex items-center gap-3">
               <div className="p-2 rounded bg-white/5 border border-white/10">
