@@ -3,7 +3,7 @@
 @theme inline {
   --color-bg: #050505;      
   --color-surface: #141414; 
-  --color-surface-2: #1c1c1c; /* hover / elevated */
+  --color-surface-2: #1c1c1c;
   --color-text: #e6e6e6;     
   --color-text-muted: #a1a1a1; 
   --color-border: #262626;
