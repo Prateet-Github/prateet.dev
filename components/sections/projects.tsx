@@ -22,7 +22,7 @@ const projects = [
     image: "/smartbuy.png",
   },
   {
-    title: "OpenMap Router", // Renamed from "MyMap" to sound more professional
+    title: "OpenMap Router",
     description:
       "A high-performance routing engine alternative to Google Maps, reducing API costs via self-hosted OSRM.",
     tech: ["React", "OSM", "OSRM", "Docker"],
@@ -48,7 +48,7 @@ const Projects = () => {
             Selected work focusing on{" "}
             <span className="text-slate-200">distributed systems</span>,{" "}
             <span className="text-slate-200">developer tooling</span>, and{" "}
-            <span className="text-slate-200">full-stack architecture</span>.
+            <span className="text-slate-200"> fullstack architecture</span>.
           </p>
         </header>
 
