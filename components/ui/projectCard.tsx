@@ -15,14 +15,14 @@ type Project = {
 
 const ProjectCard = ({ project }: { project: Project }) => {
   return (
-    <article className="mt-10 grayscale hover:grayscale-0  h-full flex flex-col border border-border bg-surface rounded-2xl overflow-hidden transition-transform md:hover:bg-surface-2 md:hover:scale-102">
+    <article className="grayscale hover:grayscale-0 h-full flex flex-col border border-border bg-surface rounded-2xl overflow-hidden transition-transform md:hover:bg-surface-2 md:hover:scale-102 duration-300">
       {/* Project Image */}
       <Image
         src={project.image}
         alt={project.title}
         width={600}
         height={400}
-        className="w-full object-cover h-48"
+        className="w-full object-cover h-54 rounded"
       />
 
       {/* Content */}
@@ -50,7 +50,7 @@ const ProjectCard = ({ project }: { project: Project }) => {
             href={project.repo}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-1 hover:text-text"
+            className="flex items-center gap-1 hover:text-text hover:scale-105"
           >
             <Github size={18} />
             Source
@@ -60,7 +60,7 @@ const ProjectCard = ({ project }: { project: Project }) => {
             href={project.live}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-1 hover:text-text"
+            className="flex items-center gap-1 hover:text-text hover:scale-105"
           >
             <Link2 size={18} />
             Live
@@ -69,7 +69,7 @@ const ProjectCard = ({ project }: { project: Project }) => {
             <Link
               href={project.npm}
               target="_blank"
-              className="text-sm  hover:text-white transition-colors"
+              className="text-sm  hover:text-white transition-colors hover:scale-105"
             >
               <div className="flex items-center gap-1 hover:text-text">
                 <FaNpm size={18} />

@@ -16,7 +16,7 @@ const projects = [
   {
     title: "GeeksGram",
     description:
-      "A social media platform that supports real-time video calls, voice calling, chat, feed, and stories.",
+      "A social media platform that supports real-time video calls, voice calling, chat, feed and stories.",
     tech: ["React", "Redux", "Node.js", "MongoDB", "WebSocket", "WebRTC"],
     live: "https://geeksgram-by-prateet.vercel.app",
     repo: "https://github.com/Prateet-Github/socialmedia-frontend",
@@ -50,7 +50,7 @@ const Projects = () => {
           <p className="text-xl text-slate-400 max-w-2xl mx-auto leading-relaxed">
             Selected work focusing on{" "}
             <span className="text-slate-200">distributed systems</span>,{" "}
-            <span className="text-slate-200">developer tooling</span>, and{" "}
+            <span className="text-slate-200">developer tooling</span>and{" "}
             <span className="text-slate-200"> fullstack architecture</span>.
           </p>
         </header>

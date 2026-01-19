@@ -33,7 +33,7 @@ const socials = [
 
 const Contact = () => {
   return (
-    <section id="contact" className="px-6 py-24 relative">
+    <section id="contact" className="px-6 py-38 relative">
       <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-size-[24px_24px] pointer-events-none" />
 
       <div className="mx-auto max-w-6xl relative z-10">
@@ -56,12 +56,12 @@ const Contact = () => {
               href={social.url}
               target="_blank"
               rel="noopener noreferrer"
-              className="group flex items-center justify-between p-6 rounded border border-white/10 bg-[#0a0a0a] hover:bg-surface hover:border-white/20 transition-all duration-300"
+              className="group flex items-center justify-between p-6 hover:scale-102 rounded border border-border bg-[#0a0a0a] hover:bg-surface hover:border-white/20 transition-all duration-300"
             >
               <div className="flex items-center gap-4">
                 {/* Icon Container */}
                 <div
-                  className={`p-3 rounded bg-white/5 border border-white/5 text-slate-300 ${social.color} transition-colors`}
+                  className={`p-3 rounded bg-white/5 border border-white/5 text-slate-300 transition-colors`}
                 >
                   <social.icon size={24} />
                 </div>
