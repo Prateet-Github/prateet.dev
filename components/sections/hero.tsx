@@ -13,12 +13,12 @@ const Hero = () => {
   return (
     <section
       id="hero"
-      className="relative min-h-[90vh] flex items-center justify-center py-24 px-4"
+      className="relative min-h-[80vh] flex items-center justify-center py-24 px-4"
     >
       {/* Optional: Very subtle grid background for industrial feel */}
       <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-size-[24px_24px] pointer-events-none" />
 
-      <div className="max-w-6xl mx-auto w-full grid md:grid-cols-2 gap-12 items-center relative z-10">
+      <div className="max-w-5xl mx-auto w-full grid md:grid-cols-2 gap-12 items-center relative z-10">
         {/* === Left Column: Text Content === */}
         <div className="flex flex-col gap-8 order-2 md:order-1">
           {/* Headlines */}
@@ -92,7 +92,7 @@ const Hero = () => {
 
         {/* === Right Column: Image === */}
         <div className="relative hidden order-1 md:order-2 md:flex lg:flex justify-center md:justify-end">
-          <div className="relative w-72 h-72 md:w-96 md:h-96">
+          <div className="relative w-60 h-60 md:w-84 md:h-84">
             {/* Clean, sharp border instead of glow */}
             <div className="relative h-full w-full rounded-xl border border-white/10 bg-[#0a0a0a] overflow-hidden">
               <Image

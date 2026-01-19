@@ -1,8 +1,9 @@
+"use client";
+
 import SkillCard from "../ui/skillCard";
 import { FaReact, FaNodeJs, FaHtml5, FaCss3Alt, FaGit } from "react-icons/fa";
 import {
   SiNextdotjs,
-  SiPostgresql,
   SiTypescript,
   SiJavascript,
   SiTailwindcss,
@@ -11,30 +12,17 @@ import {
   SiExpress,
   SiRedis,
   SiPrisma,
-  SiSupabase,
-  SiPostman,
-  SiJsonwebtokens,
+  SiPostgresql,
+  SiLinux,
   SiNginx,
+  SiGithubactions,
   SiVercel,
   SiRailway,
-  SiLinux,
-  SiGraphql,
-  SiSwagger,
   SiJest,
   SiVitest,
   SiZod,
-  SiMysql,
-  SiSqlite,
+  SiSupabase,
   SiFirebase,
-  SiCloudflare,
-  SiWebpack,
-  SiBabel,
-  SiSocketdotio,
-  SiPm2,
-  SiGithubactions,
-  SiEslint,
-  SiPrettier,
-  SiDigitalocean,
   SiSvelte,
 } from "react-icons/si";
 
@@ -42,71 +30,54 @@ const skillCategories = [
   {
     category: "Frontend",
     skills: [
-      { name: "React", icon: FaReact },
-      { name: "Next.js", icon: SiNextdotjs },
-      { name: "Svelte", icon: SiSvelte },
-      { name: "TypeScript", icon: SiTypescript },
+      { name: "React", icon: FaReact, core: true },
+      { name: "Next.js", icon: SiNextdotjs, core: true },
+      { name: "Svelte", icon: SiSvelte, core: true },
+      { name: "TypeScript", icon: SiTypescript, core: true },
       { name: "JavaScript", icon: SiJavascript },
       { name: "HTML5", icon: FaHtml5 },
       { name: "CSS3", icon: FaCss3Alt },
-      { name: "Tailwind CSS", icon: SiTailwindcss },
+      { name: "Tailwind", icon: SiTailwindcss },
     ],
   },
   {
     category: "Backend & APIs",
     skills: [
-      { name: "Node.js", icon: FaNodeJs },
-      { name: "Express.js", icon: SiExpress },
-      { name: "GraphQL", icon: SiGraphql },
-      { name: "REST APIs", icon: SiSwagger },
-      { name: "Socket.IO", icon: SiSocketdotio },
-      { name: "JWT", icon: SiJsonwebtokens },
+      { name: "Node.js", icon: FaNodeJs, core: true },
+      { name: "Express", icon: SiExpress, core: true },
+      { name: "REST", icon: SiExpress },
+      { name: "JWT", icon: SiExpress },
+      { name: "Supabase", icon: SiSupabase },
+      { name: "Firebase", icon: SiFirebase },
     ],
   },
   {
-    category: "Databases & ORM",
+    category: "Databases",
     skills: [
-      { name: "PostgreSQL", icon: SiPostgresql },
-      { name: "MongoDB", icon: SiMongodb },
-      { name: "MySQL", icon: SiMysql },
-      { name: "SQLite", icon: SiSqlite },
-      { name: "Redis", icon: SiRedis },
+      { name: "Postgres", icon: SiPostgresql, core: true },
+      { name: "MongoDB", icon: SiMongodb, core: true },
+      { name: "Redis", icon: SiRedis, core: true },
       { name: "Prisma", icon: SiPrisma },
     ],
   },
   {
-    category: "DevOps & Deployment",
+    category: "Infra & DevOps",
     skills: [
-      { name: "Docker", icon: SiDocker },
-      { name: "Linux", icon: SiLinux },
+      { name: "Docker", icon: SiDocker, core: true },
+      { name: "Linux", icon: SiLinux, core: true },
       { name: "Nginx", icon: SiNginx },
-      { name: "PM2", icon: SiPm2 },
       { name: "GitHub Actions", icon: SiGithubactions },
       { name: "Vercel", icon: SiVercel },
       { name: "Railway", icon: SiRailway },
-      { name: "DigitalOcean", icon: SiDigitalocean },
-      { name: "Cloudflare", icon: SiCloudflare },
     ],
   },
   {
-    category: "Tools & Quality",
+    category: "Testing & Tooling",
     skills: [
-      { name: "Git", icon: FaGit },
-      { name: "Postman", icon: SiPostman },
+      { name: "Git", icon: FaGit, core: true },
       { name: "Jest", icon: SiJest },
       { name: "Vitest", icon: SiVitest },
       { name: "Zod", icon: SiZod },
-      { name: "ESLint", icon: SiEslint },
-      { name: "Prettier", icon: SiPrettier },
-      { name: "Webpack", icon: SiWebpack },
-      { name: "Babel", icon: SiBabel },
-    ],
-  },
-  {
-    category: "Backend as a Service",
-    skills: [
-      { name: "Supabase", icon: SiSupabase },
-      { name: "Firebase", icon: SiFirebase },
     ],
   },
 ];
@@ -115,28 +86,33 @@ const Skills = () => {
   return (
     <section
       id="skills"
-      className="min-h-screen py-24 px-4 relative overflow-hidden"
+      className="min-h-[80vh] py-20 px-6 relative overflow-hidden"
     >
-      <div className="absolute inset-0 bg-size-[24px_24px] bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] pointer-events-none" />
+      {/* Background grid */}
+      <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-size-[24px_24px] pointer-events-none" />
 
-      <div className="relative z-10 mx-auto max-w-6xl">
-        <header className="mb-20 text-center">
-          <h2 className="text-4xl md:text-5xl font-bold tracking-tight text-white mb-4">
+      <div className="relative z-10 mx-auto max-w-5xl">
+        {/* Header */}
+        <header className="mb-14 text-center">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-3">
             Skills
           </h2>
-          <p className="text-xl text-slate-400 max-w-2xl mx-auto leading-relaxed">
-            Technologies and tools I use to build scalable web applications.
+          <p className="text-base text-slate-400 max-w-xl mx-auto">
+            Tools I use to build and ship reliable systems.
           </p>
         </header>
 
-        {/* Categorized Skills */}
+        {/* Skill Categories */}
         <div className="space-y-12">
           {skillCategories.map((category) => (
             <div key={category.category}>
-              <h3 className="text-lg font-bold text-slate-300 mb-6 uppercase tracking-wider">
+              {/* Category label */}
+              <h3 className="mb-4 text-[11px] font-semibold text-slate-500 uppercase tracking-widest">
                 {category.category}
               </h3>
-              <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5">
+
+              {/* Skills grid */}
+              <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
                 {category.skills.map((skill) => (
                   <SkillCard key={skill.name} skill={skill} />
                 ))}

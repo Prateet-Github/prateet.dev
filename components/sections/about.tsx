@@ -1,132 +1,92 @@
 import GithubCard from "../ui/githubCard";
-import { Terminal, Code2, Zap } from "lucide-react";
+import { Terminal, Zap, Code2 } from "lucide-react";
 
 const About = () => {
   return (
     <section
       id="about"
-      className="min-h-screen py-24 px-4 relative overflow-hidden"
+      className="min-h-[80vh] py-24 px-6 relative overflow-hidden"
     >
-      {/* --- Industrial Grid Background --- */}
-      <div className="absolute inset-0 bg-size-[24px_24px] bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] pointer-events-none" />
+      {/* Background grid */}
+      <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-size-[24px_24px] pointer-events-none" />
 
-      <div className="relative z-10 mx-auto max-w-6xl">
-        {/* --- Header --- */}
-        <header className="mb-20 text-center">
-          <h2 className="text-4xl md:text-5xl font-bold tracking-tight text-white mb-4">
-            About Me
-          </h2>
-          <p className="text-xl text-slate-400 max-w-2xl mx-auto leading-relaxed">
-            I focus on building systems that are reliable, performant, and easy
-            to reason about.
+      <div className="relative z-10 mx-auto max-w-5xl space-y-24">
+        {/* Header */}
+        <header className="text-center space-y-4">
+          <h2 className="text-4xl md:text-5xl font-bold text-white">About</h2>
+          <p className="text-lg text-slate-400 max-w-2xl mx-auto">
+            I design backend systems that prioritize clarity, performance, and
+            long-term maintainability.
           </p>
         </header>
 
-        {/* --- Main Content Grid --- */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mb-24">
-          {/* Left Col: Biography */}
-          <div className="space-y-8">
-            <h3 className="text-2xl font-bold text-white flex items-center gap-3">
-              <div className="p-2 rounded bg-white/5 border border-white/10">
-                <Terminal size={20} className="text-white" />
-              </div>
+        {/* Philosophy + Focus */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-16">
+          {/* Philosophy */}
+          <div className="space-y-6">
+            <div className="flex items-center gap-3 text-white font-semibold">
+              <Terminal size={18} />
               Engineering Philosophy
-            </h3>
-
-            <div className="text-slate-400 leading-relaxed space-y-6 text-lg">
-              <p>
-                My interest in engineering started with a curiosity about how
-                the internet works and gradually evolved into a focus on{" "}
-                <span className="text-white font-medium">backend systems</span>{" "}
-                and{" "}
-                <span className="text-white font-medium">
-                  distributed architecture
-                </span>
-                .
-              </p>
-
-              <p>
-                While I primarily work with the MERN stack, I'm most interested
-                in the invisible parts of software—
-                <span className="text-white font-medium">
-                  latency, security, and scalability
-                </span>
-                . I enjoy building systems that perform reliably under
-                real-world constraints, whether that's a developer tool like{" "}
-                <span className="text-white font-medium">Authly</span> or
-                designing backend services that scale predictably.
-              </p>
-
-              <p>
-                Outside of active development, I spend time studying system
-                design patterns, contributing to open source, and refining my
-                development workflow.
-              </p>
             </div>
+
+            <p className="text-slate-400 leading-relaxed">
+              My work focuses on the parts of software that users don’t see but
+              depend on every day —{" "}
+              <span className="text-white font-medium">
+                system boundaries, data flow, and failure handling
+              </span>
+              .
+            </p>
+
+            <p className="text-slate-400 leading-relaxed">
+              I enjoy building backend services and developer tools that behave
+              predictably under real-world constraints like load, latency, and
+              scale.
+            </p>
           </div>
 
-          {/* Right Col: Current Focus */}
-          <div className="space-y-8">
-            <h3 className="text-2xl font-bold text-white flex items-center gap-3">
-              <div className="p-2 rounded bg-white/5 border border-white/10">
-                <Zap size={20} className="text-white" />
-              </div>
+          {/* Focus */}
+          <div className="space-y-6">
+            <div className="flex items-center gap-3 text-white font-semibold">
+              <Zap size={18} />
               Current Focus
-            </h3>
-
-            <div className="space-y-6">
-              {/* Focus Item */}
-              <div className="p-5 rounded border border-white/10 bg-surface hover:border-white/20 transition-colors">
-                <h4 className="text-white font-bold mb-3">
-                  Building in Public
-                </h4>
-                <p className="text-slate-400 text-sm leading-relaxed">
-                  Working on open-source authentication tools and developer SDKs
-                  that simplify backend workflows.
-                </p>
-              </div>
-
-              {/* Focus Item */}
-              <div className="p-5 rounded border border-white/10 bg-surface hover:border-white/20 transition-colors">
-                <h4 className="text-white font-bold mb-3">
-                  System Design Deep Dive
-                </h4>
-                <p className="text-slate-400 text-sm leading-relaxed">
-                  Exploring distributed systems, message queues, and
-                  microservices architecture patterns.
-                </p>
-              </div>
-
-              {/* Focus Item */}
-              <div className="p-5 rounded border border-white/10 bg-surface hover:border-white/20 transition-colors">
-                <h4 className="text-white font-bold mb-3">
-                  Real-Time Technologies
-                </h4>
-                <p className="text-slate-400 text-sm leading-relaxed">
-                  Experimenting with WebSockets, WebRTC, and building
-                  low-latency communication systems.
-                </p>
-              </div>
             </div>
+
+            <ul className="space-y-4 text-slate-400">
+              <li>
+                <span className="text-white font-medium">
+                  Developer Tooling
+                </span>{" "}
+                — authentication systems, SDKs, and APIs.
+              </li>
+              <li>
+                <span className="text-white font-medium">System Design</span> —
+                distributed systems, queues, and scalability patterns.
+              </li>
+              <li>
+                <span className="text-white font-medium">
+                  Real-time Infrastructure
+                </span>{" "}
+                — WebSockets, low-latency communication, and event-driven flows.
+              </li>
+            </ul>
           </div>
         </div>
 
-        {/* --- GitHub Activity Section (Bottom) --- */}
-        <div className="space-y-8">
+        {/* Open Source */}
+        <div className="space-y-6">
           <div className="flex items-center justify-between">
-            <h3 className="text-2xl font-bold text-white flex items-center gap-3">
-              <div className="p-2 rounded bg-white/5 border border-white/10">
-                <Code2 size={20} className="text-white" />
-              </div>
-              Open Source Activity
-            </h3>
+            <div className="flex items-center gap-3 text-white font-semibold">
+              <Code2 size={18} />
+              Open Source
+            </div>
             <a
               href="https://github.com/Prateet-Github"
               target="_blank"
               rel="noreferrer"
-              className="text-sm font-medium text-slate-400 hover:text-white transition-colors flex items-center gap-1"
+              className="text-sm text-slate-400 hover:text-white transition-colors"
             >
-              View Profile &rarr;
+              GitHub →
             </a>
           </div>
 

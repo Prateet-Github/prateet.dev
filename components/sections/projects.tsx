@@ -1,3 +1,5 @@
+"use client";
+
 import ProjectCard from "../ui/projectCard";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
@@ -39,12 +41,12 @@ const Projects = () => {
   return (
     <section
       id="projects"
-      className="min-h-screen py-24 px-4 relative overflow-hidden"
+      className="min-h-[80vh] py-24 px-4 relative overflow-hidden"
     >
       {/* --- Industrial Grid Background --- */}
       <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-size-[24px_24px] pointer-events-none" />
 
-      <div className="mx-auto max-w-6xl relative z-10">
+      <div className="mx-auto max-w-5xl relative z-10">
         {/* --- Header --- */}
         <header className="mb-20 text-center">
           <h2 className="text-4xl md:text-5xl font-bold tracking-tight text-white mb-6">
