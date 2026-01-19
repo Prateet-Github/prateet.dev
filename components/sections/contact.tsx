@@ -33,16 +33,19 @@ const socials = [
 
 const Contact = () => {
   return (
-    <section id="contact" className="px-6 py-38 relative">
+    <section
+      id="contact"
+      className="min-h-[80vh] px-4 py-24 relative overflow-hidden"
+    >
       <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-size-[24px_24px] pointer-events-none" />
 
       <div className="mx-auto max-w-6xl relative z-10">
         {/* --- Header --- */}
-        <header className="mb-16 text-center">
+        <header className="mb-20 text-center">
           <h2 className="text-4xl md:text-5xl font-bold tracking-tight text-white mb-4">
             Get In Touch
           </h2>
-          <p className="text-lg text-slate-400 max-w-xl mx-auto">
+          <p className="text-xl text-slate-400 max-w-2xl mx-auto leading-relaxed">
             Have a project in mind or just want to discuss distributed systems?
             I'm always open to interesting conversations.
           </p>

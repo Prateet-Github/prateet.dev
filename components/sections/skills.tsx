@@ -54,33 +54,33 @@ const skills = [
   { name: "MongoDB", icon: SiMongodb },
   { name: "Svelte", icon: SiSvelte },
 
-  // ➕ Backend & APIs
+  // Backend & APIs
   { name: "Express.js", icon: SiExpress },
   { name: "REST APIs", icon: SiSwagger },
   { name: "JWT Authentication", icon: SiJsonwebtokens },
   { name: "Socket.IO", icon: SiSocketdotio },
   { name: "GraphQL", icon: SiGraphql },
 
-  // ➕ Databases & ORM
+  // Databases & ORM
   { name: "Prisma", icon: SiPrisma },
   { name: "MySQL", icon: SiMysql },
   { name: "SQLite", icon: SiSqlite },
   { name: "Redis", icon: SiRedis },
 
-  // ➕ DevOps & Deployment
+  // DevOps & Deployment
   { name: "Linux", icon: SiLinux },
   { name: "Nginx", icon: SiNginx },
 
   { name: "PM2", icon: SiPm2 },
 
-  // ➕ Cloud & Hosting
+  // Cloud & Hosting
 
   { name: "Vercel", icon: SiVercel },
   { name: "Railway", icon: SiRailway },
   { name: "DigitalOcean", icon: SiDigitalocean },
   { name: "Cloudflare", icon: SiCloudflare },
 
-  // ➕ Tools & Quality
+  // Tools & Quality
   { name: "Postman", icon: SiPostman },
   { name: "Jest", icon: SiJest },
   { name: "Vitest", icon: SiVitest },
@@ -91,21 +91,26 @@ const skills = [
   { name: "Webpack", icon: SiWebpack },
   { name: "Babel", icon: SiBabel },
 
-  // ➕ BaaS
+  // BaaS
   { name: "Supabase", icon: SiSupabase },
   { name: "Firebase", icon: SiFirebase },
 ];
 
 const Skills = () => {
   return (
-    <section id="skills" className="py-24 px-4 relative">
-      <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-size-[24px_24px] pointer-events-none"/>
+    <section
+      id="skills"
+      className="min-h-screen py-24 px-4 relative overflow-hidden"
+    >
+      <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-size-[24px_24px] pointer-events-none" />
 
       {/* Section header */}
       <div className="relative z-10 mx-auto max-w-6xl">
-        <header className="mb-12 text-center">
-          <h2 className="text-5xl font-bold">Skills</h2>
-          <p className="mt-2 text-text-muted">
+        <header className="mb-20 text-center">
+          <h2 className="md:text-5xl text-4xl font-bold tracking-tight text-white mb-4">
+            Skills
+          </h2>
+          <p className="text-xl text-slate-400 max-w-2xl mx-auto leading-relaxed">
             Technologies and tools I use to build scalable web applications.
           </p>
         </header>

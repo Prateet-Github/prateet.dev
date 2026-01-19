@@ -37,7 +37,7 @@ const projects = [
 
 const Projects = () => {
   return (
-    <section id="projects" className="min-h-screen py-24 px-6 relative">
+    <section id="projects" className="min-h-screen py-24 px-4 relative overflow-hidden">
       {/* --- Industrial Grid Background --- */}
       <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-size-[24px_24px] pointer-events-none" />
 
@@ -48,10 +48,8 @@ const Projects = () => {
             Featured Projects
           </h2>
           <p className="text-xl text-slate-400 max-w-2xl mx-auto leading-relaxed">
-            Selected work focusing on{" "}
-            <span className="text-slate-200">distributed systems</span>,{" "}
-            <span className="text-slate-200">developer tooling</span>and{" "}
-            <span className="text-slate-200"> fullstack architecture</span>.
+            Selected work focusing on distributed systems, developer tooling and
+            fullstack architecture.
           </p>
         </header>
 

@@ -28,7 +28,7 @@ const About = () => {
       <div className="relative z-10 mx-auto max-w-6xl">
         {/* --- Header --- */}
         <header className="mb-20 text-center">
-          <h2 className="text-4xl md:text-5xl font-bold tracking-tight text-white mb-6">
+          <h2 className="text-4xl md:text-5xl font-bold tracking-tight text-white mb-4">
             About Me
           </h2>
           <p className="text-xl text-slate-400 max-w-2xl mx-auto leading-relaxed">
