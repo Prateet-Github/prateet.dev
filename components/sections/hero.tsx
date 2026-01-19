@@ -24,7 +24,7 @@ const Hero = () => {
           {/* Headlines */}
           <div className="space-y-4">
             <h2 className="text-lg font-medium text-slate-400 flex items-center gap-2">
-              Hello, I'm <span className="text-white">Prateet Tiwari !</span>
+              Hello, I'm <span className="text-white">Prateet Tiwari!</span>
             </h2>
             <h1 className="text-5xl md:text-7xl font-bold tracking-tighter text-white leading-[1.1]">
               Building <br />
@@ -43,16 +43,15 @@ const Hero = () => {
             <span className="text-slate-200 font-medium">
               {" "}
               Real-Time Applications
-            </span>
-            , and{" "}
-            <span className="text-white font-medium">Developer Tools</span>.
+            </span>{" "}
+            and <span className="text-white font-medium">Developer Tools</span>.
           </p>
 
           {/* CTA Buttons */}
-          <div className="flex justify-center md:justify-start lg:justify-start  items-center gap-4">
+          <div className="flex justify-center md:justify-start items-center gap-4">
             <Link
               href="https://github.com/Prateet-Github"
-              className="px-8 py-4 rounded bg-slate-300 text-black font-bold hover:bg-white/90 transition-colors flex items-center gap-2"
+              className="px-8 py-4 rounded bg-slate-200 text-black font-bold hover:bg-white/90 transition-colors flex items-center gap-2"
               target="_blank"
               rel="noopener noreferrer"
             >

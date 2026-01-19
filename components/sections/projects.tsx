@@ -37,7 +37,10 @@ const projects = [
 
 const Projects = () => {
   return (
-    <section id="projects" className="min-h-screen py-24 px-4 relative overflow-hidden">
+    <section
+      id="projects"
+      className="min-h-screen py-24 px-4 relative overflow-hidden"
+    >
       {/* --- Industrial Grid Background --- */}
       <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-size-[24px_24px] pointer-events-none" />
 
@@ -49,7 +52,7 @@ const Projects = () => {
           </h2>
           <p className="text-xl text-slate-400 max-w-2xl mx-auto leading-relaxed">
             Selected work focusing on distributed systems, developer tooling and
-            fullstack architecture.
+            full- stack architecture.
           </p>
         </header>
 
