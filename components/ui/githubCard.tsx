@@ -14,7 +14,7 @@ const GitHubCalendar = dynamic(
         <span className="text-sm font-mono">Loading commit history...</span>
       </div>
     ),
-  }
+  },
 );
 
 const GithubCard = () => {
@@ -25,12 +25,11 @@ const GithubCard = () => {
   };
 
   return (
-    <article className="w-full max-w-4xl mx-auto bg-bg p-6 rounded-lg border border-white/10 shadow-lg">
+    <article className="w-full max-w-5xl mx-auto bg-bg p-6 rounded-lg border border-white/10 shadow-lg">
       <header className="mb-8">
         <h2 className="text-2xl font-bold text-white mb-2">
           GitHub Contributions
         </h2>
-        {/* <div className="h-0.5 w-full bg-linear-to-r from-purple-600 to-pink-600"></div> */}
       </header>
 
       <div className="w-full overflow-x-auto pb-4 scrollbar-hide min-h-38 grayscale hover:grayscale-0 transition-all duration-300">

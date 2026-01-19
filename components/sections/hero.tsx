@@ -13,12 +13,12 @@ const Hero = () => {
   return (
     <section
       id="hero"
-      className="relative min-h-[90vh] flex items-center justify-center pt-10 pb-10"
+      className="relative min-h-[90vh] flex items-center justify-center py-24 px-4"
     >
       {/* Optional: Very subtle grid background for industrial feel */}
       <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-size-[24px_24px] pointer-events-none" />
 
-      <div className="max-w-6xl mx-auto px-4 w-full grid md:grid-cols-2 gap-12 items-center relative z-10">
+      <div className="max-w-6xl mx-auto w-full grid md:grid-cols-2 gap-12 items-center relative z-10">
         {/* === Left Column: Text Content === */}
         <div className="flex flex-col gap-8 order-2 md:order-1">
           {/* Headlines */}
