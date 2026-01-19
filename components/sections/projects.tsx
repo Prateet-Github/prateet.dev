@@ -7,28 +7,31 @@ const projects = [
     title: "Authly SDK",
     description:
       "A developer-first headless authentication SDK for building secure, scalable auth systems without UI constraints.",
-    tech: ["Node.js", "TypeScript", "NPM", "JWT"],
+    tech: ["Node.js", "TypeScript", "NPM"],
     live: "https://authly-eight.vercel.app",
     repo: "https://github.com/Prateet-Github/authly-sdk",
     image: "/authly.png",
+    npm: "https://www.npmjs.com/package/authly-sdk",
   },
   {
-    title: "SmartBuy",
+    title: "GeeksGram",
     description:
-      "An AI-powered device recommendation engine that uses natural language processing to match users with products.",
-    tech: ["React", "Node.js", "MongoDB", "Tailwind"],
-    live: "#",
-    repo: "#",
-    image: "/smartbuy.png",
+      "A social media platform that supports real-time video calls, voice calling, chat, feed, and stories.",
+    tech: ["React", "Redux", "Node.js", "MongoDB", "WebSocket", "WebRTC"],
+    live: "https://geeksgram-by-prateet.vercel.app",
+    repo: "https://github.com/Prateet-Github/socialmedia-frontend",
+    image: "/geeks.png",
+    npm: null,
   },
   {
-    title: "OpenMap Router",
+    title: "GetRides",
     description:
-      "A high-performance routing engine alternative to Google Maps, reducing API costs via self-hosted OSRM.",
-    tech: ["React", "OSM", "OSRM", "Docker"],
+      "A ride-sharing web application that utilizes OpenStreetMap data and OSRM for route optimization and real-time ride matching.",
+    tech: ["React", "OSM", "OSRM", "Nominatim", "Node.js", "WebSocket"],
     live: "#",
-    repo: "#",
-    image: "/demo.png",
+    repo: "https://github.com/Prateet-Github/GetRides-backend",
+    image: "/getrides.png",
+    npm: null,
   },
 ];
 

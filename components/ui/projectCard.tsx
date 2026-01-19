@@ -1,5 +1,7 @@
 import { Github, Link2 } from "lucide-react";
 import Image from "next/image";
+import { FaNpm } from "react-icons/fa";
+import Link from "next/link";
 
 type Project = {
   title: string;
@@ -8,6 +10,7 @@ type Project = {
   repo: string;
   live: string;
   image: string;
+  npm: string | null;
 };
 
 const ProjectCard = ({ project }: { project: Project }) => {
@@ -62,6 +65,18 @@ const ProjectCard = ({ project }: { project: Project }) => {
             <Link2 size={18} />
             Live
           </a>
+          {project.npm && (
+            <Link
+              href={project.npm}
+              target="_blank"
+              className="text-sm  hover:text-white transition-colors"
+            >
+              <div className="flex items-center gap-1 hover:text-text">
+                <FaNpm size={18} />
+                NPM
+              </div>
+            </Link>
+          )}
         </div>
       </div>
     </article>
