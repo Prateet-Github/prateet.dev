@@ -18,7 +18,7 @@ const Navbar = () => {
     <header className="sticky top-0 z-50 shadow-sm md:bg-transparent bg-bg md:backdrop-blur-md lg:bg-transparent lg:backdrop-blur-md">
       <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-size-[24px_24px] pointer-events-none" />
 
-      <nav className="mx-auto max-w-5xl justify-between flex items-center py-4 relative z-10">
+      <nav className="mx-auto max-w-5xl justify-between flex items-center py-4 px-4 md:px-0 relative z-10">
         <a href="/">
           <span className="font-extrabold text-text">Prateet.dev</span>
         </a>

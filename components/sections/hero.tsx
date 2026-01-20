@@ -45,7 +45,7 @@ const Hero = () => {
             and <span className="text-white font-medium">Developer Tools</span>.
           </p>
 
-          <div className="flex justify-center md:justify-start items-center gap-4">
+          <div className="flex justify-start items-center gap-4">
             <Link
               href="https://github.com/Prateet-Github"
               className="px-8 py-4 rounded bg-slate-200 text-black font-bold hover:bg-white/90 transition-colors flex items-center gap-2"
