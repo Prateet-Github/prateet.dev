@@ -67,7 +67,7 @@ const Hero = () => {
             </a>
           </div>
 
-          <div className="flex justify-center md:justify-start lg:justify-start  items-center gap-8 pt-4 mt-4">
+          <div className="flex justify-start items-center gap-8 pt-4 mt-4">
             <SocialLink
               href="https://linkedin.com/in/prateet-tiwari"
               icon={Linkedin}
