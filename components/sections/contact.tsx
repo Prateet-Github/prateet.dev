@@ -37,21 +37,22 @@ const Contact = () => {
       id="contact"
       className="min-h-[80vh] px-4 py-24 relative overflow-hidden"
     >
+      {/* Bg Grid */}
       <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-size-[24px_24px] pointer-events-none" />
 
       <div className="mx-auto max-w-5xl relative z-10">
-        {/* --- Header --- */}
-        <header className="mb-20 text-center">
-          <h2 className="text-4xl md:text-5xl font-bold tracking-tight text-white mb-4">
+        {/*  Header  */}
+        <header className="mb-16 text-center">
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-3">
             Get In Touch
           </h2>
-          <p className="text-xl text-slate-400 max-w-2xl mx-auto leading-relaxed">
+          <p className="text-base text-slate-400 max-w-xl mx-auto">
             Have a project in mind or just want to discuss distributed systems?
             I'm always open to interesting conversations.
           </p>
         </header>
 
-        {/* --- Contact Grid --- */}
+        {/*  Contact Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-3xl mx-auto">
           {socials.map((social) => (
             <a
@@ -59,17 +60,15 @@ const Contact = () => {
               href={social.url}
               target="_blank"
               rel="noopener noreferrer"
-              className="group flex items-center justify-between p-6 hover:scale-102 rounded border border-border bg-[#0a0a0a] hover:bg-surface hover:border-white/20 transition-all duration-300"
+              className="group flex items-center justify-between p-6 hover:scale-102 rounded-lg border border-white/10 bg-surface hover:bg-surface-2 hover:border-white/25 transition-all duration-300"
             >
               <div className="flex items-center gap-4">
-                {/* Icon Container */}
                 <div
                   className={`p-3 rounded bg-white/5 border border-white/5 text-slate-300 transition-colors`}
                 >
                   <social.icon size={24} />
                 </div>
 
-                {/* Text Info */}
                 <div className="flex flex-col">
                   <span className="text-sm text-slate-500 font-medium">
                     {social.name}
@@ -80,7 +79,6 @@ const Contact = () => {
                 </div>
               </div>
 
-              {/* Arrow Icon */}
               <ArrowUpRight
                 className="text-slate-600 group-hover:text-white group-hover:-translate-y-1 group-hover:translate-x-1 transition-all duration-300"
                 size={20}

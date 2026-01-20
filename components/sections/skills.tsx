@@ -88,13 +88,13 @@ const Skills = () => {
       id="skills"
       className="min-h-[80vh] py-20 px-6 relative overflow-hidden"
     >
-      {/* Background grid */}
+      {/* Bg grid */}
       <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-size-[24px_24px] pointer-events-none" />
 
       <div className="relative z-10 mx-auto max-w-5xl">
         {/* Header */}
-        <header className="mb-14 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-3">
+        <header className="mb-16 text-center">
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-3">
             Skills
           </h2>
           <p className="text-base text-slate-400 max-w-xl mx-auto">

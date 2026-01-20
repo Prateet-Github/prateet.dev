@@ -43,22 +43,22 @@ const Projects = () => {
       id="projects"
       className="min-h-[80vh] py-24 px-4 relative overflow-hidden"
     >
-      {/* --- Industrial Grid Background --- */}
+      {/* Bg Grid */}
       <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-size-[24px_24px] pointer-events-none" />
 
       <div className="mx-auto max-w-5xl relative z-10">
-        {/* --- Header --- */}
-        <header className="mb-20 text-center">
-          <h2 className="text-4xl md:text-5xl font-bold tracking-tight text-white mb-6">
+        {/* Header */}
+        <header className="mb-16 text-center">
+          <h2 className="text-4xl md:text-5xl font-bold  text-white mb-3">
             Featured Projects
           </h2>
-          <p className="text-xl text-slate-400 max-w-2xl mx-auto leading-relaxed">
+          <p className="text-base text-slate-400 max-w-xl mx-auto">
             Selected work focusing on distributed systems, developer tooling and
             full- stack architecture.
           </p>
         </header>
 
-        {/* --- Projects Grid --- */}
+        {/* Projects Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           {projects.map((project) => (
             <div key={project.title} className="h-full">
@@ -67,7 +67,7 @@ const Projects = () => {
           ))}
         </div>
 
-        {/* --- Footer Link --- */}
+        {/* Footer Link  */}
         <div className="flex justify-center">
           <Link
             href="https://github.com/Prateet-Github"

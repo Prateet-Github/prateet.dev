@@ -5,16 +5,18 @@ const About = () => {
   return (
     <section
       id="about"
-      className="min-h-[80vh] py-24 px-6 relative overflow-hidden"
+      className="min-h-[80vh] py-24 px-4 relative overflow-hidden"
     >
       {/* Background grid */}
       <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-size-[24px_24px] pointer-events-none" />
 
-      <div className="relative z-10 mx-auto max-w-5xl space-y-24">
+      <div className="relative z-10 mx-auto max-w-5xl space-y-16">
         {/* Header */}
-        <header className="text-center space-y-4">
-          <h2 className="text-4xl md:text-5xl font-bold text-white">About</h2>
-          <p className="text-lg text-slate-400 max-w-2xl mx-auto">
+        <header className="text-center mb-16">
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-3">
+            About
+          </h2>
+          <p className="text-base text-slate-400 max-w-xl mx-auto">
             I design backend systems that prioritize clarity, performance, and
             long-term maintainability.
           </p>

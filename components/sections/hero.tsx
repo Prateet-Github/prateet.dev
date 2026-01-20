@@ -15,13 +15,12 @@ const Hero = () => {
       id="hero"
       className="relative min-h-[80vh] flex items-center justify-center py-24 px-4"
     >
-      {/* Optional: Very subtle grid background for industrial feel */}
+      {/* Bg Grid */}
       <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-size-[24px_24px] pointer-events-none" />
 
       <div className="max-w-5xl mx-auto w-full grid md:grid-cols-2 gap-12 items-center relative z-10">
-        {/* === Left Column: Text Content === */}
+        {/* Left*/}
         <div className="flex flex-col gap-8 order-2 md:order-1">
-          {/* Headlines */}
           <div className="space-y-4">
             <h2 className="text-lg font-medium text-slate-400 flex items-center gap-2">
               Hello, I'm <span className="text-white">Prateet Tiwari!</span>
@@ -32,7 +31,6 @@ const Hero = () => {
             </h1>
           </div>
 
-          {/* Description */}
           <p className="text-lg text-slate-400 leading-relaxed max-w-xl">
             Full-stack engineer based in Delhi, India. Focused on building
             <span className="text-slate-200 font-medium">
@@ -47,7 +45,6 @@ const Hero = () => {
             and <span className="text-white font-medium">Developer Tools</span>.
           </p>
 
-          {/* CTA Buttons */}
           <div className="flex justify-center md:justify-start items-center gap-4">
             <Link
               href="https://github.com/Prateet-Github"
@@ -70,7 +67,6 @@ const Hero = () => {
             </a>
           </div>
 
-          {/* Social Links */}
           <div className="flex justify-center md:justify-start lg:justify-start  items-center gap-8 pt-4 mt-4">
             <SocialLink
               href="https://linkedin.com/in/prateet-tiwari"
@@ -90,10 +86,9 @@ const Hero = () => {
           </div>
         </div>
 
-        {/* === Right Column: Image === */}
+        {/*  Right  */}
         <div className="relative hidden order-1 md:order-2 md:flex lg:flex justify-center md:justify-end">
           <div className="relative w-60 h-60 md:w-84 md:h-84">
-            {/* Clean, sharp border instead of glow */}
             <div className="relative h-full w-full rounded-xl border border-white/10 bg-[#0a0a0a] overflow-hidden">
               <Image
                 src="/pfp.jpg"
