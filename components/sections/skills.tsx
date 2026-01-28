@@ -1,7 +1,15 @@
 "use client";
 
 import SkillCard from "../ui/skillCard";
-import { FaReact, FaNodeJs, FaHtml5, FaCss3Alt, FaGit } from "react-icons/fa";
+import {
+  FaReact,
+  FaNodeJs,
+  FaHtml5,
+  FaCss3Alt,
+  FaGit,
+  FaGithub,
+  FaCode,
+} from "react-icons/fa";
 import {
   SiNextdotjs,
   SiTypescript,
@@ -18,66 +26,130 @@ import {
   SiGithubactions,
   SiVercel,
   SiRailway,
-  SiJest,
-  SiVitest,
   SiZod,
   SiSupabase,
   SiFirebase,
   SiSvelte,
+  SiRemix,
+  SiRedux,
+  SiThreedotjs,
+  SiKoa,
+  SiFastify,
+  SiNestjs,
+  SiSocketdotio,
+  SiTrpc,
+  SiGraphql,
+  SiClickhouse,
+  SiApachecassandra,
+  SiMysql,
+  SiAmazondynamodb,
+  SiCockroachlabs,
+  SiNetlify,
+  SiRender,
+  SiKubernetes,
+  SiApachekafka,
+  SiRabbitmq,
+  SiPostman,
+  SiFramer,
+  SiSwagger,
+  SiWebrtc,
 } from "react-icons/si";
 
 const skillCategories = [
   {
     category: "Frontend",
     skills: [
-      { name: "React", icon: FaReact, core: true },
-      { name: "Next.js", icon: SiNextdotjs, core: true },
-      { name: "Svelte", icon: SiSvelte, core: true },
-      { name: "TypeScript", icon: SiTypescript, core: true },
-      { name: "JavaScript", icon: SiJavascript },
+      { name: "React", icon: FaReact },
+      { name: "Next.js", icon: SiNextdotjs },
+      { name: "TypeScript", icon: SiTypescript },
+      { name: "JavaScript (ES6+)", icon: SiJavascript },
+      { name: "Tailwind CSS", icon: SiTailwindcss },
+
       { name: "HTML5", icon: FaHtml5 },
       { name: "CSS3", icon: FaCss3Alt },
-      { name: "Tailwind", icon: SiTailwindcss },
+
+      { name: "Redux Toolkit", icon: SiRedux },
+      { name: "Framer Motion", icon: SiFramer },
+
+      { name: "Remix", icon: SiRemix },
+      { name: "Svelte", icon: SiSvelte },
+      { name: "Three.js", icon: SiThreedotjs },
     ],
   },
   {
     category: "Backend & APIs",
     skills: [
-      { name: "Node.js", icon: FaNodeJs, core: true },
-      { name: "Express", icon: SiExpress, core: true },
-      { name: "REST", icon: SiExpress },
-      { name: "JWT", icon: SiExpress },
+      { name: "Node.js", icon: FaNodeJs },
+
+      { name: "Express.js", icon: SiExpress },
+      { name: "NestJS", icon: SiNestjs },
+      { name: "Fastify", icon: SiFastify },
+      { name: "Koa", icon: SiKoa },
+
+      { name: "REST APIs", icon: SiSwagger },
+      { name: "GraphQL", icon: SiGraphql },
+      { name: "tRPC", icon: SiTrpc },
+
+      { name: "Socket.IO", icon: SiSocketdotio },
+      { name: "WebRTC", icon: SiWebrtc },
+    ],
+  },
+  {
+    category: "Databases & Data Layer",
+    skills: [
+      { name: "PostgreSQL", icon: SiPostgresql },
+      { name: "MongoDB", icon: SiMongodb },
+      { name: "Redis", icon: SiRedis },
+
+      { name: "Prisma", icon: SiPrisma },
+
+      { name: "MySQL", icon: SiMysql },
+      { name: "ClickHouse", icon: SiClickhouse },
+      { name: "Cassandra", icon: SiApachecassandra },
+      { name: "DynamoDB", icon: SiAmazondynamodb },
+      { name: "CockroachDB", icon: SiCockroachlabs },
+    ],
+  },
+  {
+    category: "DevOps, Platforms & Hosting",
+    skills: [
+      { name: "Docker", icon: SiDocker },
+      { name: "Linux", icon: SiLinux },
+      { name: "Nginx", icon: SiNginx },
+
+      { name: "GitHub Actions", icon: SiGithubactions },
+
+      { name: "Vercel", icon: SiVercel },
+      { name: "Railway", icon: SiRailway },
+      { name: "Render", icon: SiRender },
+      { name: "Netlify", icon: SiNetlify },
+
+      { name: "Kubernetes", icon: SiKubernetes },
+    ],
+  },
+  {
+    category: "BaaS & Auth Platforms",
+    skills: [
       { name: "Supabase", icon: SiSupabase },
       { name: "Firebase", icon: SiFirebase },
     ],
   },
   {
-    category: "Databases",
+    category: "Tooling & DX",
     skills: [
-      { name: "Postgres", icon: SiPostgresql, core: true },
-      { name: "MongoDB", icon: SiMongodb, core: true },
-      { name: "Redis", icon: SiRedis, core: true },
-      { name: "Prisma", icon: SiPrisma },
-    ],
-  },
-  {
-    category: "Infra & DevOps",
-    skills: [
-      { name: "Docker", icon: SiDocker, core: true },
-      { name: "Linux", icon: SiLinux, core: true },
-      { name: "Nginx", icon: SiNginx },
-      { name: "GitHub Actions", icon: SiGithubactions },
-      { name: "Vercel", icon: SiVercel },
-      { name: "Railway", icon: SiRailway },
-    ],
-  },
-  {
-    category: "Testing & Tooling",
-    skills: [
-      { name: "Git", icon: FaGit, core: true },
-      { name: "Jest", icon: SiJest },
-      { name: "Vitest", icon: SiVitest },
+      { name: "Git", icon: FaGit },
+      { name: "GitHub", icon: FaGithub },
+      { name: "Postman", icon: SiPostman },
+      { name: "VS Code", icon: FaCode },
+
       { name: "Zod", icon: SiZod },
+    ],
+  },
+  {
+    category: "Messaging & Eventing",
+    skills: [
+      { name: "Kafka", icon: SiApachekafka },
+      { name: "RabbitMQ", icon: SiRabbitmq },
     ],
   },
 ];
