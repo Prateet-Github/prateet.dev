@@ -1,7 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
-import { Github, Linkedin, Mail, Download, Twitter } from "lucide-react";
+import { Github, Linkedin, Mail, Download, Twitter, Code2 } from "lucide-react";
 import { LucideIcon } from "lucide-react";
+import GithubCard from "../ui/githubCard";
 
 type SocialLinkProps = {
   href: string;
@@ -12,8 +13,8 @@ type SocialLinkProps = {
 const Hero = () => {
   return (
     <section
-      id="hero"
-      className="relative min-h-[80vh] flex items-center justify-center py-24 px-4"
+      id="about"
+      className="relative min-h-[80vh] flex flex-col items-center justify-center py-24 px-4"
     >
       {/* Bg Grid */}
       <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-size-[24px_24px] pointer-events-none" />
@@ -100,6 +101,26 @@ const Hero = () => {
             </div>
           </div>
         </div>
+      </div>
+
+      {/* Open Source */}
+      <div className="space-y-6 mt-16">
+        <div className="flex items-center justify-between">
+          <div className="flex items-center gap-3 text-white font-semibold">
+            <Code2 size={18} />
+            Open Source
+          </div>
+          <a
+            href="https://github.com/Prateet-Github"
+            target="_blank"
+            rel="noreferrer"
+            className="text-sm text-slate-400 hover:text-white transition-colors"
+          >
+            GitHub →
+          </a>
+        </div>
+
+        <GithubCard />
       </div>
     </section>
   );
