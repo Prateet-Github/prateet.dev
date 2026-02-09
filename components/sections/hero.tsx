@@ -14,7 +14,7 @@ const Hero = () => {
   return (
     <section
       id="about"
-      className="relative min-h-[80vh] flex flex-col items-center justify-center py-24 px-4"
+      className="relative min-h-[80vh] flex flex-col py-24 px-4"
     >
       {/* Bg Grid */}
       <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-size-[24px_24px] pointer-events-none" />
@@ -105,7 +105,7 @@ const Hero = () => {
 
       {/* Open Source */}
       <div className="space-y-6 mt-16">
-        <div className="flex items-center justify-between">
+        <div className="flex items-center justify-between max-w-5xl mx-auto px-4">
           <div className="flex items-center gap-3 text-white font-semibold">
             <Code2 size={18} />
             Open Source
