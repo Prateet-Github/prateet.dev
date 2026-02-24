@@ -30,8 +30,11 @@ const Navbar = () => {
                   const id = item.href.replace("#", "");
                   const target = document.getElementById(id);
 
-                  if (target && (window as any).lenis) {
-                    (window as any).lenis.scrollTo(target);
+                  if (target) {
+                    target.scrollIntoView({
+                      behavior: "smooth",
+                      block: "start",
+                    });
                   }
 
                   setIsOpen(false);
