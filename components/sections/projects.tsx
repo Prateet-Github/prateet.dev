@@ -3,39 +3,7 @@
 import ProjectCard from "../ui/projectCard";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
-
-const projects = [
-  {
-    title: "Authly SDK",
-    description:
-      "A developer-first headless authentication SDK for building secure, scalable auth systems without UI constraints.",
-    tech: ["Node.js", "TypeScript", "NPM"],
-    live: "https://authly-eight.vercel.app",
-    repo: "https://github.com/Prateet-Github/authly-sdk",
-    image: "/authly.png",
-    npm: "https://www.npmjs.com/package/authly-sdk",
-  },
-  {
-    title: "GeeksGram",
-    description:
-      "A social media platform that supports real-time video calls, voice calling, chat, feed and stories.",
-    tech: ["React", "Redux", "Node.js", "MongoDB", "WebSocket", "WebRTC"],
-    live: "https://geeksgram-by-prateet.vercel.app",
-    repo: "https://github.com/Prateet-Github/socialmedia-frontend",
-    image: "/geeks.png",
-    npm: null,
-  },
-  {
-    title: "GetRides",
-    description:
-      "A ride-sharing web application that utilizes OpenStreetMap data and OSRM for route optimization and real-time ride matching.",
-    tech: ["React", "OSM", "OSRM", "Nominatim", "Node.js", "WebSocket"],
-    live: "#",
-    repo: "https://github.com/Prateet-Github/GetRides-backend",
-    image: "/getrides.png",
-    npm: null,
-  },
-];
+import { projects } from "@/data/project";
 
 const Projects = () => {
   return (
