@@ -25,12 +25,9 @@ const GithubCard = () => {
   return (
     <div className="w-full max-w-6xl mx-auto group">
       <div className="relative overflow-hidden rounded-2xl border border-white/5 bg-[#080808] p-6 transition-all duration-500 hover:border-green-500/20">
-        {/* Header: Simplified Terminal Style */}
+        {/* Header */}
         <div className="flex items-start mb-8 relative z-10">
           <div className="flex gap-4">
-            {/* Minimal vertical indicator */}
-            {/* <div className="w-px h-10 bg-linear-to-b from-green-500/50 to-transparent" /> */}
-
             <div>
               <h3 className="text-sm font-mono font-bold text-white uppercase tracking-widest">
                 Contribution_Log
@@ -47,13 +44,11 @@ const GithubCard = () => {
           <div className="w-full opacity-40 group-hover:opacity-100  transition-all duration-700 ease-in-out flex justify-center">
             <GitHubCalendar
               username="Prateet-Github"
-              // Adjusting block size to allow it to breathe across the full width
               blockSize={15}
               blockMargin={4}
               fontSize={12}
               theme={theme}
               colorScheme="dark"
-              // Setting responsive behavior
               loading={false}
               style={{
                 color: "#475569",
