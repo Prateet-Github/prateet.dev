@@ -1,95 +1,97 @@
 import Image from "next/image";
 import Link from "next/link";
-import { Github, Linkedin, Mail, Download, Twitter, Code2 } from "lucide-react";
+import { Github, Download, Code2 } from "lucide-react";
 import GithubCard from "../ui/githubCard";
 import { SocialLink } from "../ui/SocialLink";
+import { socials } from "@/data/socials";
 
 const Hero = () => {
   return (
     <section
       id="about"
-      className="relative min-h-[80vh] flex flex-col py-24 px-4"
+      className="relative min-h-screen flex flex-col justify-center scroll-mt-20 pt-8 md:pt-18 px-4 overflow-hidden"
     >
-      {/* Bg Grid */}
-      <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-size-[24px_24px] pointer-events-none" />
-
-      <div className="max-w-5xl mx-auto w-full grid md:grid-cols-2 gap-12 items-center relative z-10">
-        {/* Left*/}
+      <div className="max-w-6xl mx-auto w-full grid md:grid-cols-[1.2fr_0.8fr] gap-12 items-center relative z-10">
+        {/* Left Side Content */}
         <div className="flex flex-col gap-8 order-2 md:order-1">
-          <div className="space-y-4">
-            <h2 className="text-lg font-medium text-slate-400 flex items-center gap-2">
-              Hello, I'm <span className="text-white">Prateet Tiwari!</span>
+          <div className="space-y-6">
+            <h2 className="text-sm font-mono tracking-widest text-slate-500 uppercase flex items-center gap-3">
+              {/* <span className="h-px w-8 bg-green-500/50" /> */}
+              Hello, I&apos;m{" "}
+              <span className="font-bold tracking-normal text-green-500">
+                Prateet Tiwari
+              </span>
             </h2>
-            <h1 className="text-5xl md:text-7xl font-bold tracking-tighter text-white leading-[1.1]">
+
+            <h1 className="text-6xl md:text-8xl font-bold tracking-tighter text-white leading-[0.9]">
               Building <br />
-              <span className="text-slate-300">Scalable Systems.</span>
+              <span className="text-transparent bg-clip-text bg-linear-to-r from-white to-slate-500">
+                Scalable Systems.
+              </span>
             </h1>
           </div>
 
-          <p className="text-lg text-slate-400 leading-relaxed max-w-xl">
-            Full Stack Engineer based in Delhi, India. Focused on building
-            <span className="text-slate-200 font-medium">
+          <p className="text-lg md:text-xl text-slate-400 leading-relaxed max-w-xl font-mono tracking-tight">
+            Full Stack Engineer based in Delhi, India. I architect
+            <span className="text-green-500 font-medium">
               {" "}
-              Scalable Backend Systems
+              high-throughput backends
             </span>
-            ,
-            <span className="text-slate-200 font-medium">
+            , low-latency{" "}
+            <span className="text-green-500 font-medium">
               {" "}
-              Real-Time Applications
-            </span>{" "}
-            and <span className="text-white font-medium">Developer Tools</span>.
+              real-time systems
+            </span>
+            {""} and the infrastructure that powers modern applications.
           </p>
 
-          <div className="flex justify-start items-center gap-4">
+          <div className="flex flex-wrap items-center gap-4">
             <Link
               href="https://github.com/Prateet-Github"
-              className="px-8 py-4 rounded bg-slate-200 text-black font-bold hover:bg-white/90 transition-colors flex items-center gap-2"
+              className="px-8 py-4 rounded-full bg-green-500 text-black font-bold hover:bg-green-400 hover:shadow-[0_0_20px_rgba(34,197,94,0.3)] transition-all flex items-center gap-2 group"
               target="_blank"
-              rel="noopener noreferrer"
             >
               Github
-              <Github className="w-4 h-4 fill-bg" />
+              <Github className="w-4 h-4" />
             </Link>
 
             <a
               href="/Prateet Tiwari.pdf"
               target="_blank"
-              rel="noopener noreferrer"
-              className="px-8 py-4 rounded border border-white/10 bg-bg text-white font-bold hover:bg-surface transition-colors flex items-center gap-2"
+              className="px-8 py-4 rounded-full border border-white/10 bg-white/5 text-white font-bold hover:bg-white/10 transition-colors flex items-center gap-2"
             >
-              <Download className="w-4 h-4" />
+              <Download className="w-4 h-4 text-green-500" />
               Resume
             </a>
           </div>
 
-          <div className="flex justify-start items-center gap-8 pt-4 mt-4">
-            <SocialLink
-              href="https://linkedin.com/in/prateet-tiwari"
-              icon={Linkedin}
-              label="LinkedIn"
-            />
-            <SocialLink
-              href="mailto:prateettiwari29@gmail.com"
-              icon={Mail}
-              label="Email"
-            />
-            <SocialLink
-              href="https://x.com/prateet_tiwarii"
-              icon={Twitter}
-              label="X (Twitter)"
-            />
+          <div className="flex items-center gap-8 pt-4">
+            {socials
+              .filter((social) => social.name !== "GitHub")
+              .map((social) => (
+                <SocialLink
+                  key={social.name}
+                  href={social.url}
+                  icon={social.icon}
+                  label={social.name}
+                />
+              ))}
           </div>
         </div>
 
-        {/*  Right  */}
-        <div className="relative hidden order-1 md:order-2 md:flex lg:flex justify-center md:justify-end">
-          <div className="relative w-60 h-60 md:w-84 md:h-84">
-            <div className="relative h-full w-full rounded-xl border border-white/10 bg-[#0a0a0a] overflow-hidden">
+        {/* Right Side Content */}
+        <div className="relative hidden md:flex justify-end order-1 md:order-2">
+          <div className="relative group">
+            {/* Minimal Green Corner Accent */}
+            <div className="absolute -top-2 -right-2 w-24 h-24 border-t-2 border-r-2 border-green-500/50 rounded-tr-2xl group-hover:scale-110 transition-transform duration-500" />
+            <div className="absolute -bottom-2 -left-2 w-24 h-24 border-b-2 border-l-2 border-green-500/50 rounded-bl-2xl group-hover:scale-110 transition-transform duration-500" />
+
+            <div className="relative w-64 h-80 md:w-90 md:h-90 rounded-2xl border border-white/10 bg-[#0a0a0a] overflow-hidden">
               <Image
-                src="/pfp.jpg"
+                src="/drdoom.jpeg"
                 alt="Prateet Tiwari"
                 fill
-                className="object-cover grayscale hover:grayscale-0 transition-all duration-500 hover:scale-102"
+                className="object-cover grayscale group-hover:grayscale-0 transition-all duration-700 ease-in-out group-hover:scale-105"
                 priority
               />
             </div>
@@ -97,23 +99,17 @@ const Hero = () => {
         </div>
       </div>
 
-      {/* Open Source */}
-      <div className="space-y-6 mt-16">
-        <div className="flex items-center justify-between max-w-5xl mx-auto px-4">
-          <div className="flex items-center gap-3 text-white font-semibold">
-            <Code2 size={18} />
-            Open Source
+      {/* Open Source Section */}
+      <div className="mt-24 max-w-6xl mx-auto w-full relative z-10">
+        <div className="flex items-center justify-between px-4 mb-8">
+          <div className="flex items-center gap-3 text-sm font-mono tracking-tighter text-green-500">
+            <Code2 size={16} strokeWidth={2.5} />
+            <span className="uppercase tracking-widest">
+              Open Source Activity
+            </span>
           </div>
-          <a
-            href="https://github.com/Prateet-Github"
-            target="_blank"
-            rel="noreferrer"
-            className="text-sm text-slate-400 hover:text-white transition-colors"
-          >
-            GitHub →
-          </a>
+          <div className="h-px flex-1 mx-8 bg-linear-to-r from-green-500/20 to-transparent" />
         </div>
-
         <GithubCard />
       </div>
     </section>

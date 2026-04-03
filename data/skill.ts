@@ -45,7 +45,7 @@ export const skillCategories = [
       { name: "Next.js", icon: SiNextdotjs },
 
       { name: "TypeScript", icon: SiTypescript },
-      { name: "JavaScript (ES6+)", icon: SiJavascript },
+      { name: "JavaScript", icon: SiJavascript },
       { name: "Tailwind CSS", icon: SiTailwindcss },
       { name: "HTML5", icon: FaHtml5 },
       { name: "CSS3", icon: FaCss3Alt },

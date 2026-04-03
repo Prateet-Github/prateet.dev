@@ -1,4 +1,6 @@
-# Prateet Tiwari — Developer Portfolio
+# Prateet Tiwari - Developer Portfolio
+
+![Portfolio](public/Portfolio.png)
 
 ![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)
 

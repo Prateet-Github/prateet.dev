@@ -2,7 +2,6 @@
 
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
-import Link from "next/link";
 
 const navItems = [
   { href: "#about", label: "About" },
@@ -15,12 +14,15 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 shadow-sm md:bg-transparent bg-bg md:backdrop-blur-md lg:bg-transparent lg:backdrop-blur-md">
-      <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-size-[24px_24px] pointer-events-none" />
-
-      <nav className="mx-auto max-w-5xl justify-between flex items-center p-4 relative z-10">
-        <a href="/">
-          <span className="font-extrabold text-text">Prateet.dev</span>
+    <header className="sticky top-0 z-50 shadow-sm md:bg-transparent bg-black md:backdrop-blur-md lg:bg-transparent lg:backdrop-blur-md">
+      <nav className="mx-auto max-w-6xl justify-between flex items-center p-4 relative z-10">
+        <a href="/" className="group flex items-center gap-1">
+          <span className="text-xl font-bold tracking-tighter text-white">
+            Prateet
+            <span className="text-green-500 group-hover:animate-pulse">
+              .dev
+            </span>
+          </span>
         </a>
         <ul className="hidden md:flex gap-6">
           {navItems.map((item) => (
@@ -39,26 +41,43 @@ const Navbar = () => {
 
                   setIsOpen(false);
                 }}
-                className="hover:text-gray-300 cursor-pointer"
+                className="text-[11px] font-mono uppercase tracking-[0.2em] text-slate-400 hover:text-green-400 transition-colors relative group"
               >
                 {item.label}
               </button>
             </li>
           ))}
         </ul>
-        <button className="md:hidden" onClick={() => setIsOpen(!isOpen)}>
+        <button
+          className="md:hidden text-green-500"
+          onClick={() => setIsOpen(!isOpen)}
+        >
           {isOpen ? <X /> : <Menu />}
         </button>
       </nav>
 
       {isOpen && (
-        <ul className="flex bg-bg absolute w-full flex-col items-center gap-4 md:hidden border-b border-white/5 p-4">
-          <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-size-[24px_24px] pointer-events-none" />
+        <ul className="flex bg-black absolute w-full flex-col items-center gap-4 md:hidden border-b border-white/5 p-4">
           {navItems.map((item) => (
             <li key={item.href}>
-              <Link href={item.href} onClick={() => setIsOpen(false)}>
+              <button
+                onClick={() => {
+                  const id = item.href.replace("#", "");
+                  const target = document.getElementById(id);
+
+                  if (target) {
+                    target.scrollIntoView({
+                      behavior: "smooth",
+                      block: "start",
+                    });
+                  }
+
+                  setIsOpen(false);
+                }}
+                className="text-[11px] font-mono uppercase tracking-[0.2em] text-slate-400 hover:text-green-400 transition-colors relative group"
+              >
                 {item.label}
-              </Link>
+              </button>
             </li>
           ))}
         </ul>
