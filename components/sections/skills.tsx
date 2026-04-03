@@ -1,5 +1,3 @@
-"use client";
-
 import SkillCard from "../ui/skillCard";
 import { skillCategories } from "@/data/skill";
 

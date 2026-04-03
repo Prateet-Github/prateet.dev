@@ -1,5 +1,3 @@
-"use client";
-
 import ProjectCard from "../ui/projectCard";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
@@ -22,7 +20,7 @@ const Projects = () => {
           </h2>
           <p className="text-base text-slate-400 max-w-xl mx-auto">
             Selected work focusing on distributed systems, developer tooling and
-            full- stack architecture.
+            full-stack architecture.
           </p>
         </header>
 

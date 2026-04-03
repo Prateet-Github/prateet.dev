@@ -1,14 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
 import { Github, Linkedin, Mail, Download, Twitter, Code2 } from "lucide-react";
-import { LucideIcon } from "lucide-react";
 import GithubCard from "../ui/githubCard";
-
-type SocialLinkProps = {
-  href: string;
-  icon: LucideIcon;
-  label: string;
-};
+import { SocialLink } from "../ui/SocialLink";
 
 const Hero = () => {
   return (
@@ -33,7 +27,7 @@ const Hero = () => {
           </div>
 
           <p className="text-lg text-slate-400 leading-relaxed max-w-xl">
-            Full-stack engineer based in Delhi, India. Focused on building
+            Full Stack Engineer based in Delhi, India. Focused on building
             <span className="text-slate-200 font-medium">
               {" "}
               Scalable Backend Systems
@@ -123,22 +117,6 @@ const Hero = () => {
         <GithubCard />
       </div>
     </section>
-  );
-};
-
-// Clean, minimal social link component
-
-const SocialLink = ({ href, icon: Icon, label }: SocialLinkProps) => {
-  return (
-    <a
-      href={href}
-      target="_blank"
-      rel="noreferrer"
-      className="group flex items-center gap-2 text-slate-500 hover:text-white/80 transition-colors"
-    >
-      <Icon className="w-5 h-5" />
-      <span className="hidden md:inline text-sm font-medium">{label}</span>
-    </a>
   );
 };
 
