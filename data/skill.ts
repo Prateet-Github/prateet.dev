@@ -35,41 +35,57 @@ import {
   SiWebrtc,
   SiClerk,
   SiAmazon,
+  SiFfmpeg,
+  SiGo,
+  SiRedbull,
+  SiGit,
+  SiYaml,
+  SiThreedotjs,
 } from "react-icons/si";
 
 export const skillCategories = [
+  {
+    category: "Languages",
+    skills: [
+      { name: "TypeScript", icon: SiTypescript },
+      { name: "Go", icon: SiGo },
+      { name: "JavaScript", icon: SiJavascript },
+      { name: "HTML5", icon: FaHtml5 },
+      { name: "CSS3", icon: FaCss3Alt },
+      { name: "YAML", icon: SiYaml },
+    ],
+  },
   {
     category: "Frontend",
     skills: [
       { name: "React", icon: FaReact },
       { name: "Next.js", icon: SiNextdotjs },
-
-      { name: "TypeScript", icon: SiTypescript },
-      { name: "JavaScript", icon: SiJavascript },
-      { name: "Tailwind CSS", icon: SiTailwindcss },
-      { name: "HTML5", icon: FaHtml5 },
-      { name: "CSS3", icon: FaCss3Alt },
+      { name: "Tanstack Query", icon: FaCode },
       { name: "Redux Toolkit", icon: SiRedux },
-      // { name: "Framer Motion", icon: SiFramer },
-      // { name: "Three.js", icon: SiThreedotjs },
+      { name: "Tailwind CSS", icon: SiTailwindcss },
+      { name: "Three.js", icon: SiThreedotjs },
     ],
   },
+
   {
-    category: "Backend & APIs",
+    category: "Backend",
     skills: [
       { name: "Node.js", icon: FaNodeJs },
+      { name: "Go", icon: SiGo },
       { name: "Express.js", icon: SiExpress },
       { name: "Fastify", icon: SiFastify },
       { name: "NestJS", icon: SiNestjs },
-      { name: "REST APIs", icon: SiSwagger },
       { name: "Socket.IO", icon: SiSocketdotio },
       { name: "WebRTC", icon: SiWebrtc },
+      { name: "BullMQ", icon: SiRedbull },
       { name: "Kafka", icon: SiApachekafka },
-      // { name: "RabbitMQ", icon: SiRabbitmq },
+      { name: "Supabase", icon: SiSupabase },
+      { name: "Firebase", icon: SiFirebase },
+      { name: "FFmpeg", icon: SiFfmpeg },
     ],
   },
   {
-    category: "Databases & Data Layer",
+    category: "Databases & Storage",
     skills: [
       { name: "PostgreSQL", icon: SiPostgresql },
       { name: "AWS S3", icon: SiAmazon },
@@ -80,25 +96,25 @@ export const skillCategories = [
     ],
   },
   {
-    category: "DevOps & Tools",
+    category: "DevOps & Deployment",
     skills: [
       { name: "Docker", icon: SiDocker },
-      { name: "Nginx", icon: SiNginx },
       { name: "GitHub Actions", icon: SiGithubactions },
-      { name: "Git", icon: FaGit },
-      { name: "GitHub", icon: FaGithub },
-      { name: "Postman", icon: SiPostman },
-      { name: "VS Code", icon: FaCode },
-    ],
-  },
-  {
-    category: "BaaS & Deployment",
-    skills: [
-      { name: "Supabase", icon: SiSupabase },
-      { name: "Firebase", icon: SiFirebase },
-      { name: "Clerk", icon: SiClerk },
+      { name: "Git", icon: SiGit },
+      { name: "Nginx", icon: SiNginx },
       { name: "Vercel", icon: SiVercel },
       { name: "Render", icon: SiRender },
+
     ],
   },
+  // {
+  //   category: "BaaS & Deployment",
+  //   skills: [
+  //     { name: "Supabase", icon: SiSupabase },
+  //     { name: "Firebase", icon: SiFirebase },
+  //     { name: "Clerk", icon: SiClerk },
+  //     { name: "Vercel", icon: SiVercel },
+  //     { name: "Render", icon: SiRender },
+  //   ],
+  // },
 ];
