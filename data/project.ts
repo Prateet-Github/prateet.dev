@@ -70,7 +70,7 @@ export const projects = [
     ],
     live: null,
     repo: "https://github.com/Prateet-Github/logstream",
-    image: "/logstream.png",
+    image: "/logStream.jpg",
     npm: null,
   },
   {
