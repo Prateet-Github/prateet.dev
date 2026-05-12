@@ -7,7 +7,7 @@ type Project = {
   description: string;
   tech: string[];
   repo: string;
-  live: string;
+  live: string | null;
   image: string;
   npm: string | null;
 };
@@ -64,18 +64,20 @@ const ProjectCard = ({ project }: { project: Project }) => {
             Source_Code
           </a>
 
-          <a
-            href={project.live}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center gap-2 text-xs font-mono text-slate-500 hover:text-white transition-all group/link"
-          >
-            <ExternalLink
-              size={16}
-              className="group-hover/link:text-green-500 transition-colors"
-            />
-            Live_Demo
-          </a>
+          {project.live && (
+            <a
+              href={project.live}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 text-xs font-mono text-slate-500 hover:text-white transition-all group/link"
+            >
+              <ExternalLink
+                size={16}
+                className="group-hover/link:text-green-500 transition-colors"
+              />
+              Live_Demo
+            </a>
+          )}
 
           {project.npm && (
             <Link
