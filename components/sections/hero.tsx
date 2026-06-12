@@ -51,7 +51,7 @@ const Hero = () => {
               className="px-8 py-4 rounded-full bg-green-500 text-black font-bold hover:bg-green-400 hover:shadow-[0_0_20px_rgba(34,197,94,0.3)] transition-all flex items-center gap-2 group"
               target="_blank"
             >
-              Github
+              GitHub
               <Github className="w-4 h-4" />
             </Link>
 
