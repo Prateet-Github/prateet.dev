@@ -1,17 +1,17 @@
 export const projects = [
-      {
+  {
     title: "Video Streaming Platform",
     description:
       "A scalable video streaming platform supporting uploads, transcoding, thumbnail generation, and adaptive bitrate streaming.",
     tech: [
-      "Next.js",
-      "Node.js",
-      "Golang",
-      "FFmpeg",
-      "Redis",
-      "BullMQ",
+      "Go",
+      "Gin",
       "AWS S3",
+      "FFmpeg",
+      "Asynq",
+      "Redis",
       "MongoDB",
+      "Next.js",
       "TanStack Query",
     ],
     live: null,
@@ -19,18 +19,20 @@ export const projects = [
     image: "/streamit.png",
     npm: null,
   },
-    {
-    title: "Notification System",
+  {
+    title: "Distributed Notification System",
     description:
       "A multi-channel notification system supporting email, SMS, push, and in-app delivery with asynchronous processing.",
     tech: [
-      "NestJS",
-      "Redis",
-      "Twilio",
-      "SendGrid",
-      "PostgreSQL",
       "TypeScript",
-      "GitHub Actions",
+      "NestJS",
+      "Redis Pub/Sub",
+      "BullMQ",
+      "Firebase Cloud Messaging",
+      "Twilio",
+      "Resend",
+      "PostgreSQL",
+      "Nginx",
     ],
     live: null,
     repo: "https://github.com/Prateet-Github/notification-system",
@@ -43,12 +45,13 @@ export const projects = [
       "A fault-tolerant payment microservice with idempotent APIs, race-condition-safe processing, retries, and asynchronous job handling.",
     tech: [
       "Node.js",
-      "TypeScript",
       "PostgreSQL",
       "Prisma",
       "Redis",
       "BullMQ",
       "Stripe",
+      "Webhooks",
+      "Autocannon",
     ],
     live: null,
     repo: "https://github.com/Prateet-Github/payment-service",
@@ -61,7 +64,6 @@ export const projects = [
     description:
       "A distributed log ingestion and analytics platform designed for high-throughput event processing and real-time querying.",
     tech: [
-      "TypeScript",
       "Fastify",
       "Kafka",
       "ClickHouse",
@@ -74,7 +76,7 @@ export const projects = [
     npm: null,
   },
   {
-    title: "Authentication NPM Package",
+    title: "Authentication Package (NPM)",
     description:
       "A developer-first authentication SDK for building secure and scalable authentication systems with flexible frontend integration.",
     tech: ["TypeScript", "NPM", "Node.js", "Express", "React"],
