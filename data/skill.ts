@@ -41,6 +41,7 @@ import {
   SiGit,
   SiYaml,
   SiThreedotjs,
+  SiGin,
 } from "react-icons/si";
 
 export const skillCategories = [
@@ -72,6 +73,7 @@ export const skillCategories = [
     skills: [
       { name: "Node.js", icon: FaNodeJs },
       { name: "Go", icon: SiGo },
+      { name: "Gin", icon: SiGin },
       { name: "Express.js", icon: SiExpress },
       { name: "Fastify", icon: SiFastify },
       { name: "NestJS", icon: SiNestjs },
@@ -79,7 +81,6 @@ export const skillCategories = [
       { name: "WebRTC", icon: SiWebrtc },
       { name: "BullMQ", icon: SiRedbull },
       { name: "Kafka", icon: SiApachekafka },
-      { name: "Supabase", icon: SiSupabase },
       { name: "Firebase", icon: SiFirebase },
       { name: "FFmpeg", icon: SiFfmpeg },
     ],
