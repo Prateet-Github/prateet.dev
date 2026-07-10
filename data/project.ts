@@ -99,7 +99,7 @@ export const projects = [
       "MongoDB",
       "Cloudinary",
     ],
-    live: null,
+    live: "https://geeksgram-by-prateet.vercel.app",
     repo: "https://github.com/Prateet-Github/geeksgram-backend",
     image: "/geeksgram.png",
     npm: null,
