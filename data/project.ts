@@ -2,7 +2,7 @@ export const projects = [
   {
     title: "Video Streaming Platform",
     description:
-      "A scalable video streaming platform supporting uploads, transcoding, thumbnail generation, and adaptive bitrate streaming.",
+      "A distributed video streaming platform supporting asynchronous transcoding, HLS streaming, Redis analytics, and AWS S3 storage.",
     tech: [
       "Go",
       "Gin",
@@ -15,7 +15,7 @@ export const projects = [
       "Next.js",
       "TanStack Query",
     ],
-    live: null,
+    live: "https://streamit-one-xi.vercel.app",
     repo: "https://github.com/Prateet-Github/streamit-server",
     image: "/streamit.png",
     npm: null,
