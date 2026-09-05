@@ -1,6 +1,6 @@
 export const projects = [
   {
-    title: "Video Streaming Platform",
+    title: "Streamit: Video Streaming Platform",
     description:
       "A distributed video streaming platform supporting asynchronous transcoding, HLS streaming, Redis analytics, and AWS S3 storage.",
     tech: [
@@ -21,7 +21,7 @@ export const projects = [
     npm: null,
   },
   {
-    title: "Sentinel: An API Gateway",
+    title: "Sentinel: API Gateway",
     description:
       "A distributed API gateway with reverse proxy, load balancing, circuit breaking, health checking, and rate limiting for microservices.",
     tech: [
@@ -37,6 +37,19 @@ export const projects = [
     live: null,
     repo: "https://github.com/Prateet-Github/sentinel",
     image: "/sentinel.png",
+    npm: null,
+  },
+  {
+    title: "DoomOS: OS Kernel (Building)",
+    description:
+      "A lightweight operating system kernel written in C, supporting memory management, interrupts, processes and system calls.",
+    tech: [
+      "C",
+      "Makefile",
+    ],
+    live: null,
+    repo: "https://github.com/Prateet-Github/doomos",
+    image: "/doomos.png",
     npm: null,
   },
   {
@@ -78,25 +91,8 @@ export const projects = [
     image: "/payment.png",
     npm: null,
   },
-
   {
-    title: "Distributed Log Ingestion",
-    description:
-      "A distributed log ingestion and analytics platform designed for high-throughput event processing and real-time querying.",
-    tech: [
-      "Fastify",
-      "Kafka",
-      "ClickHouse",
-      "Docker",
-      "GitHub Actions",
-    ],
-    live: null,
-    repo: "https://github.com/Prateet-Github/logstream",
-    image: "/logStream.jpg",
-    npm: null,
-  },
-  {
-    title: "Authentication Package (NPM)",
+    title: "Authly: Authentication Package",
     description:
       "A developer-first authentication SDK for building secure and scalable authentication systems with flexible frontend integration.",
     tech: ["TypeScript", "NPM", "Node.js", "Express", "React"],
