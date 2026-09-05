@@ -21,6 +21,25 @@ export const projects = [
     npm: null,
   },
   {
+    title: "Sentinel: An API Gateway",
+    description:
+      "A distributed API gateway with reverse proxy, load balancing, circuit breaking, health checking, and rate limiting for microservices.",
+    tech: [
+      "Go",
+      "Reverse Proxy",
+      "Retry Engine",
+      "Router",
+      "Load Balancer",
+      "Circuit Breaker",
+      "Health Checker",
+      "Rate Limiter"
+    ],
+    live: null,
+    repo: "https://github.com/Prateet-Github/sentinel",
+    image: "/sentinel.png",
+    npm: null,
+  },
+  {
     title: "Distributed Notification System",
     description:
       "A multi-channel notification system supporting email, SMS, push, and in-app delivery with asynchronous processing.",
@@ -85,24 +104,6 @@ export const projects = [
     repo: "https://github.com/Prateet-Github/authly-sdk",
     image: "/authly.png",
     npm: "https://www.npmjs.com/package/authly-sdk",
-  },
-  {
-    title: "Social Media Platform",
-    description:
-      "A real-time social platform featuring messaging, video calls, and content sharing with scalable backend architecture.",
-    tech: [
-      "Node.js",
-      "React",
-      "Redux",
-      "WebRTC",
-      "Socket.IO",
-      "MongoDB",
-      "Cloudinary",
-    ],
-    live: "https://geeksgram-by-prateet.vercel.app",
-    repo: "https://github.com/Prateet-Github/geeksgram-backend",
-    image: "/geeksgram.png",
-    npm: null,
-  },
+  }
 ];
 
