@@ -40,15 +40,16 @@ export const projects = [
     npm: null,
   },
   {
-    title: "DoomOS: OS Kernel (Building)",
+    title: "Celestial: Event driven HTTP server",
     description:
-      "A lightweight operating system kernel written in C, supporting memory management, interrupts, processes and system calls.",
+      "A high-performance event-driven HTTP server written from scratch in C with kqueue, thread pool, and asynchronous I/O for handling concurrent requests efficiently.",
     tech: [
       "C",
       "Makefile",
+      "Kqueue",
     ],
     live: null,
-    repo: "https://github.com/Prateet-Github/doomos",
+    repo: "https://github.com/Prateet-Github/celestial",
     image: "/doomos.png",
     npm: null,
   },
