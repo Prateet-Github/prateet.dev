@@ -21,14 +21,14 @@ export const projects = [
     npm: null,
   },
   {
-    title: "Sentinel: API Gateway",
+    title: "Sentinel: Distributed API Gateway",
     description:
       "A distributed API gateway with reverse proxy, load balancing, circuit breaking, health checking, and rate limiting for microservices wirh a separate control plane.",
     tech: [
       "Go",
-      "Reverse Proxy",
-      "Retry Engine",
-      "Router",
+      "gRPC",
+      "Protobuf",
+      "SQLite",
       "Load Balancer",
       "Circuit Breaker",
       "Health Checker",
@@ -54,7 +54,7 @@ export const projects = [
     npm: null,
   },
   {
-    title: "Distributed Notification System",
+    title: "Notification System",
     description:
       "A multi-channel notification system supporting email, SMS, push, and in-app delivery with asynchronous processing.",
     tech: [
@@ -74,9 +74,9 @@ export const projects = [
     npm: null,
   },
   {
-    title: "Payment MicroService",
+    title: "Payment Service",
     description:
-      "A fault-tolerant payment microservice with idempotent APIs, race-condition-safe processing, retries, and asynchronous job handling.",
+      "A fault-tolerant payment service with idempotent APIs, race-condition-safe processing, retries, and asynchronous job handling.",
     tech: [
       "Node.js",
       "PostgreSQL",
