@@ -26,7 +26,6 @@ const buildMonth = (date: Date) => {
   const month = date.getMonth();
   const today = date.getDate();
 
-  // Monday-first grid, always 6 rows so the card never changes height.
   const offset = (new Date(year, month, 1).getDay() + 6) % 7;
   const daysInMonth = new Date(year, month + 1, 0).getDate();
   const daysInPrev = new Date(year, month, 0).getDate();
@@ -43,7 +42,6 @@ const buildMonth = (date: Date) => {
     return w !== 0 && w !== 6;
   };
 
-  // The "Meet Prateet" slot: next weekday after today, else the last weekday before it.
   let slot = today + 1;
   while (slot <= daysInMonth && !isWeekday(slot)) slot += 1;
   if (slot > daysInMonth) {
@@ -54,7 +52,6 @@ const buildMonth = (date: Date) => {
   return { year, month, today, slot, cells };
 };
 
-// Muted filler events so the grid reads like a real, lived-in calendar.
 const FILLER = [
   { day: 3, label: "Ship v2" },
   { day: 11, label: "Review" },
@@ -63,7 +60,6 @@ const FILLER = [
 ];
 
 const MeetCalendar = () => {
-  // Resolved on the client only, so server and client markup always match.
   const [now, setNow] = useState<Date | null>(null);
   useEffect(() => setNow(new Date()), []);
 
@@ -171,11 +167,11 @@ const MeetCalendar = () => {
             return (
               <div
                 key={i}
-                className={`relative flex aspect-square flex-col rounded-lg border p-1.5 transition-colors lg:aspect-[7/6] ${
+                className={`relative flex aspect-square flex-col rounded-lg border p-1.5 transition-colors lg:aspect-7/6 ${
                   isSlot
                     ? "border-green-500/40 bg-green-500/10"
                     : inMonth
-                      ? "border-white/5 bg-white/[0.02]"
+                      ? "border-white/5 bg-white/2"
                       : "border-transparent"
                 }`}
               >

@@ -4,17 +4,10 @@ import { useEffect, useRef, type PointerEvent, type ReactNode } from "react";
 
 type TiltCardProps = {
   children: ReactNode;
-  /** Size / group classes for the tilting element, e.g. "group relative h-72 w-72" */
   className?: string;
-  /** Max tilt in degrees on each axis */
   maxTilt?: number;
 };
 
-/**
- * Tilts toward the cursor. Direct children can sit at different depths with
- * style={{ transform: "translateZ(60px)" }} and will separate as it tilts.
- * Mouse only: touch devices and reduced-motion users get a static card.
- */
 export default function TiltCard({
   children,
   className = "",

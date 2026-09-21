@@ -2,8 +2,6 @@
 
 import { useEffect, useState } from "react";
 
-// Each phrase is rendered as two fixed lines so the headline keeps the same
-// height no matter which phrase is showing.
 const PHRASES: [string, string][] = [
   ["Scalable", "Systems."],
   ["Efficient", "Backends."],
@@ -16,9 +14,6 @@ const HOLD = 2600;
 
 type Props = { className?: string };
 
-// Cycles through PHRASES in place: the current phrase fades up and out
-// while the next one fades in from just below it. Every phrase sits in the
-// same grid cell, so nothing else on the page reflows between swaps.
 const RotatingText = ({ className = "" }: Props) => {
   const [index, setIndex] = useState(0);
   const [prev, setPrev] = useState<number | null>(null);
@@ -39,8 +34,7 @@ const RotatingText = ({ className = "" }: Props) => {
       <span className="sr-only">{PHRASES[0].join(" ")}</span>
 
       {PHRASES.map(([first, second], i) => {
-        const state =
-          i === index ? "active" : i === prev ? "leaving" : "idle";
+        const state = i === index ? "active" : i === prev ? "leaving" : "idle";
 
         return (
           <span

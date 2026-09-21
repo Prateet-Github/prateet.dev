@@ -4,8 +4,6 @@ import { ArrowRight, Download, Code2 } from "lucide-react";
 import GithubCard from "../ui/githubCard";
 import TiltCard from "../ui/TiltCard";
 import RotatingText from "../ui/RotatingText";
-import { SocialLink } from "../ui/SocialLink";
-import { socials } from "@/data/socials";
 
 const step = (i: number) => ({ "--i": i }) as CSSProperties;
 
@@ -34,7 +32,6 @@ const Hero = () => {
               style={step(1)}
             >
               Building <br />
-              {/* Rotates through Scalable Systems / High-Throughput Backends / Real-Time Systems / Distributed Systems */}
               <RotatingText className="mt-2 text-6xl md:text-8xl" />
             </h1>
           </div>

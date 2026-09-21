@@ -125,49 +125,6 @@ const Contact = () => {
             </div>
           </div>
         </div>
-
-        {/* Quick facts */}
-        {/* <div className="grid grid-cols-1 gap-6 border-t border-white/5 pt-12 md:grid-cols-3">
-          <div className="flex flex-col gap-2">
-            <div className="flex items-center gap-2 text-green-500">
-              <Zap size={14} />
-              <span className="font-mono text-xs uppercase tracking-widest">
-                Current_Status
-              </span>
-            </div>
-            <p className="flex items-center gap-2 font-mono text-sm text-slate-400">
-              <span className="relative flex h-2 w-2">
-                <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-green-500 opacity-60 motion-reduce:animate-none" />
-                <span className="relative inline-flex h-2 w-2 rounded-full bg-green-500" />
-              </span>
-              Available for new opportunities.
-            </p>
-          </div>
-
-          <div className="flex flex-col gap-2">
-            <div className="flex items-center gap-2 text-green-500">
-              <Terminal size={14} />
-              <span className="font-mono text-xs uppercase tracking-widest">
-                Preferred_Stack
-              </span>
-            </div>
-            <p className="font-mono text-sm text-slate-400">
-              React, Next.js, Node.js &amp; React Native.
-            </p>
-          </div>
-
-          <div className="flex flex-col gap-2">
-            <div className="flex items-center gap-2 text-green-500">
-              <MessageSquare size={14} />
-              <span className="font-mono text-xs uppercase tracking-widest">
-                Typical_Response
-              </span>
-            </div>
-            <p className="font-mono text-sm text-slate-400">
-              &lt; 24 hours (GMT+5:30)
-            </p>
-          </div>
-        </div> */}
       </div>
 
       <Footer />

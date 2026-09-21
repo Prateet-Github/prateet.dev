@@ -6,7 +6,6 @@ import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 import { navItems } from "@/data/navItems";
 
-// One shared spring so every piece of motion feels like it belongs together
 const SPRING = {
   type: "spring",
   stiffness: 380,
@@ -15,8 +14,6 @@ const SPRING = {
 } as const;
 const EASE_OUT = [0.22, 1, 0.36, 1] as const;
 
-// On a black page a dark shadow is invisible, so the lift comes from light:
-// a hairline ring + soft emerald glow underneath + a faint white halo + a top-edge highlight.
 const RAISED =
   "shadow-[0_0_0_1px_rgba(255,255,255,0.04),0_10px_40px_-12px_rgba(52,211,153,0.28),0_4px_20px_-6px_rgba(255,255,255,0.08),inset_0_1px_0_rgba(255,255,255,0.14)]";
 
@@ -59,12 +56,9 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [active, setActive] = useState("about");
 
-  // While a click-triggered smooth scroll is running, ignore the observer.
-  // Otherwise the pill would hop through every section the page scrolls past.
   const lockRef = useRef(false);
   const lockTimer = useRef<number | null>(null);
 
-  // Highlight the link for the section currently in the middle of the screen
   useEffect(() => {
     const sections = navItems
       .map((item) => document.getElementById(item.href.slice(1)))
@@ -91,7 +85,6 @@ const Navbar = () => {
   const goTo = (href: string) => {
     const id = href.slice(1);
 
-    // Move the pill immediately, then let the scroll catch up
     setActive(id);
     lockRef.current = true;
     if (lockTimer.current) window.clearTimeout(lockTimer.current);
@@ -106,7 +99,6 @@ const Navbar = () => {
   };
 
   return (
-    // reducedMotion="user" turns off transform/layout animations for people who ask for it
     <MotionConfig reducedMotion="user">
       <header className="sticky top-0 z-50 px-4 pt-3">
         <div className="relative mx-auto max-w-6xl">
