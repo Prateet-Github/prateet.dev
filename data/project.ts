@@ -23,7 +23,7 @@ export const projects = [
   {
     title: "Sentinel: API Gateway",
     description:
-      "A distributed API gateway with reverse proxy, load balancing, circuit breaking, health checking, and rate limiting for microservices.",
+      "A distributed API gateway with reverse proxy, load balancing, circuit breaking, health checking, and rate limiting for microservices wirh a separate control plane.",
     tech: [
       "Go",
       "Reverse Proxy",
@@ -42,7 +42,7 @@ export const projects = [
   {
     title: "Celestial: Event driven HTTP server",
     description:
-      "A high-performance event-driven HTTP server written from scratch in C with kqueue, thread pool, and asynchronous I/O for handling concurrent requests efficiently.",
+      "A event-driven HTTP server written from scratch in C with kqueue, thread pool and asyn I/O for handling concurrent requests efficiently.",
     tech: [
       "C",
       "Makefile",
