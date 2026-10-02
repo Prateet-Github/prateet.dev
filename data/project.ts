@@ -1,5 +1,20 @@
 export const projects = [
   {
+    title: "Bifrost: Distributed Search Engine",
+    description:
+      "A distributed search engine with inverted index, query parsing, and ranking algorithms for efficient information retrieval.",
+    tech: [
+      "Go",
+      "BM25",
+      "Inverted Index",
+      "Makefile",
+    ],
+    live: null,
+    repo: "https://github.com/Prateet-Github/bifrost",
+    image: "/bifrost.png",
+    npm: null,
+  },
+  {
     title: "Streamit: Video Streaming Platform",
     description:
       "A distributed video streaming platform supporting asynchronous transcoding, HLS streaming, Redis analytics, and AWS S3 storage.",
@@ -21,7 +36,7 @@ export const projects = [
     npm: null,
   },
   {
-    title: "Sentinel: Distributed API Gateway",
+    title: "Sentinel: An API Gateway",
     description:
       "A distributed API gateway with reverse proxy, load balancing, circuit breaking, health checking, and rate limiting for microservices wirh a separate control plane.",
     tech: [
@@ -39,18 +54,20 @@ export const projects = [
     image: "/sentinel.png",
     npm: null,
   },
+
   {
-    title: "Celestial: Event driven HTTP server",
+    title: "Vibranium: Event-Driven HTTP Server",
     description:
-      "A event-driven HTTP server written from scratch in C with kqueue, thread pool and asyn I/O for handling concurrent requests efficiently.",
+      "A low-level, event-driven HTTP server written from scratch in Rust, built around kqueue and non-blocking TCP I/O.",
     tech: [
-      "C",
-      "Makefile",
+      "Rust",
       "Kqueue",
+      "TCP",
+      "Cargo",
     ],
     live: null,
-    repo: "https://github.com/Prateet-Github/celestial",
-    image: "/doomos.png",
+    repo: "https://github.com/Prateet-Github/vibranium",
+    image: "/vibranium.png",
     npm: null,
   },
   {
@@ -92,15 +109,17 @@ export const projects = [
     image: "/payment.png",
     npm: null,
   },
-  {
-    title: "Authly: Authentication Package",
-    description:
-      "A developer-first authentication SDK for building secure and scalable authentication systems with flexible frontend integration.",
-    tech: ["TypeScript", "NPM", "Node.js", "Express", "React"],
-    live: "https://authly-eight.vercel.app",
-    repo: "https://github.com/Prateet-Github/authly-sdk",
-    image: "/authly.png",
-    npm: "https://www.npmjs.com/package/authly-sdk",
-  }
+
+
+  // {
+  //   title: "Authly: Authentication Package",
+  //   description:
+  //     "A developer-first authentication SDK for building secure and scalable authentication systems with flexible frontend integration.",
+  //   tech: ["TypeScript", "NPM", "Node.js", "Express", "React"],
+  //   live: "https://authly-eight.vercel.app",
+  //   repo: "https://github.com/Prateet-Github/authly-sdk",
+  //   image: "/authly.png",
+  //   npm: "https://www.npmjs.com/package/authly-sdk",
+  // }
 ];
 
