@@ -42,7 +42,7 @@ const Hero = () => {
           >
             I&apos;m a Software Engineer and I primarily work with{" "}
             <span className="font-medium text-green-500">
-              TypeScript, Go and Node.js
+              Go, TypeScript and Node.js
             </span>
             , with a strong interest in{" "}
             <span className="font-medium text-green-500">

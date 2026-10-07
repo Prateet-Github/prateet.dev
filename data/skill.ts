@@ -4,6 +4,7 @@ import {
   FaHtml5,
   FaCss3Alt,
   FaCode,
+  FaBolt,
 } from "react-icons/fa";
 import {
   SiNextdotjs,
@@ -16,7 +17,6 @@ import {
   SiMongodb,
   SiExpress,
   SiRedis,
-  SiPrisma,
   SiPostgresql,
   SiNginx,
   SiGithubactions,
@@ -33,6 +33,8 @@ import {
   SiRedbull,
   SiGit,
   SiGin,
+  SiRust,
+
 } from "react-icons/si";
 
 export const skillCategories = [
@@ -42,7 +44,7 @@ export const skillCategories = [
       { name: "TypeScript", icon: SiTypescript },
       { name: "Go", icon: SiGo },
       { name: "JavaScript", icon: SiJavascript },
-      { name: "Python", icon: SiPython },
+      { name: "Rust", icon: SiRust },
       { name: "HTML5", icon: FaHtml5 },
       { name: "CSS3", icon: FaCss3Alt },
     ],
@@ -74,8 +76,9 @@ export const skillCategories = [
       { name: "MongoDB", icon: SiMongodb },
       { name: "Redis", icon: SiRedis },
       { name: "SQLite", icon: SiSqlite },
+      { name: "Bbolt", icon: FaBolt },
       { name: "AWS S3", icon: SiAmazon },
-      { name: "Prisma", icon: SiPrisma },
+
     ],
   },
 

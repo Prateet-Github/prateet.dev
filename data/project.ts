@@ -5,9 +5,11 @@ export const projects = [
       "A distributed search engine with inverted index, query parsing, and ranking algorithms for efficient information retrieval.",
     tech: [
       "Go",
-      "BM25",
-      "Inverted Index",
+      "bbolt",
       "Makefile",
+      "BM25",
+
+
     ],
     live: null,
     repo: "https://github.com/Prateet-Github/bifrost",
