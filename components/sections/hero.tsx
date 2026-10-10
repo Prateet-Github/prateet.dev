@@ -67,7 +67,7 @@ const Hero = () => {
             </a>
 
             <a
-              href="/Prateet%20Tiwari.pdf"
+              href="/Prateet%20Tiwari%20Go.pdf"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-8 py-4 font-bold text-white transition-colors hover:bg-white/10"
