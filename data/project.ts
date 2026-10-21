@@ -1,15 +1,13 @@
 export const projects = [
   {
-    title: "Bifrost: Distributed Search Engine",
+    title: "Bifrost: Search Engine",
     description:
-      "A distributed search engine with inverted index, query parsing, and ranking algorithms for efficient information retrieval.",
+      "A lexical search engine with inverted index, query parsing, and ranking algorithms for efficient information retrieval.",
     tech: [
       "Go",
       "bbolt",
       "Makefile",
       "BM25",
-
-
     ],
     live: null,
     repo: "https://github.com/Prateet-Github/bifrost",
@@ -17,7 +15,37 @@ export const projects = [
     npm: null,
   },
   {
-    title: "Streamit: Video Streaming Platform",
+    title: "FlowQ: Job Queue",
+    description:
+      "A Redis backed job queue in Go with crash recovery and batched pipelined processing.",
+    tech: [
+      "Go",
+      "Redis",
+      "Lua",
+      "Prometheus",
+    ],
+    live: null,
+    repo: "https://github.com/Prateet-Github/flowq",
+    image: "/flowq.png",
+    npm: null,
+  },
+  {
+    title: "Sentinel: API Gateway",
+    description:
+      "An API gateway with reverse proxy, load balancing, circuit breaking, health checking, and rate limiting for microservices wirh a separate control plane.",
+    tech: [
+      "Go",
+      "gRPC",
+      "Protobuf",
+      "SQLite",
+    ],
+    live: null,
+    repo: "https://github.com/Prateet-Github/sentinel",
+    image: "/sentinel.png",
+    npm: null,
+  },
+  {
+    title: "Streamit: Video Platform",
     description:
       "A distributed video streaming platform supporting asynchronous transcoding, HLS streaming, Redis analytics, and AWS S3 storage.",
     tech: [
@@ -27,7 +55,6 @@ export const projects = [
       "FFmpeg",
       "Asynq",
       "Redis Streams",
-      "Cron Jobs",
       "MongoDB",
       "Next.js",
       "TanStack Query",
@@ -38,44 +65,9 @@ export const projects = [
     npm: null,
   },
   {
-    title: "Sentinel: An API Gateway",
+    title: "Notify: Notification System",
     description:
-      "A distributed API gateway with reverse proxy, load balancing, circuit breaking, health checking, and rate limiting for microservices wirh a separate control plane.",
-    tech: [
-      "Go",
-      "gRPC",
-      "Protobuf",
-      "SQLite",
-      "Load Balancer",
-      "Circuit Breaker",
-      "Health Checker",
-      "Rate Limiter"
-    ],
-    live: null,
-    repo: "https://github.com/Prateet-Github/sentinel",
-    image: "/sentinel.png",
-    npm: null,
-  },
-
-  {
-    title: "Vibranium: Event-Driven HTTP Server",
-    description:
-      "A low-level, event-driven HTTP server written from scratch in Rust, built around kqueue and non-blocking TCP I/O.",
-    tech: [
-      "Rust",
-      "Kqueue",
-      "TCP",
-      "Cargo",
-    ],
-    live: null,
-    repo: "https://github.com/Prateet-Github/vibranium",
-    image: "/vibranium.png",
-    npm: null,
-  },
-  {
-    title: "Notification System",
-    description:
-      "A multi-channel notification system supporting email, SMS, push, and in-app delivery with asynchronous processing.",
+      "A multi channel notification system supporting email, SMS, push, and in-app delivery with asynchronous processing.",
     tech: [
       "TypeScript",
       "NestJS",
@@ -93,35 +85,21 @@ export const projects = [
     npm: null,
   },
   {
-    title: "Payment Service",
+    title: "Payit: Payment Service",
     description:
-      "A fault-tolerant payment service with idempotent APIs, race-condition-safe processing, retries, and asynchronous job handling.",
+      "A fault tolerant payment service with idempotent APIs, race-condition-safe processing, retries, and asynchronous job handling.",
     tech: [
       "Node.js",
+      "Express",
       "PostgreSQL",
       "Prisma",
       "Redis",
       "BullMQ",
       "Stripe",
-      "Webhooks",
-      "Autocannon",
     ],
     live: null,
     repo: "https://github.com/Prateet-Github/payment-service",
     image: "/payment.png",
     npm: null,
   },
-
-
-  // {
-  //   title: "Authly: Authentication Package",
-  //   description:
-  //     "A developer-first authentication SDK for building secure and scalable authentication systems with flexible frontend integration.",
-  //   tech: ["TypeScript", "NPM", "Node.js", "Express", "React"],
-  //   live: "https://authly-eight.vercel.app",
-  //   repo: "https://github.com/Prateet-Github/authly-sdk",
-  //   image: "/authly.png",
-  //   npm: "https://www.npmjs.com/package/authly-sdk",
-  // }
 ];
-
