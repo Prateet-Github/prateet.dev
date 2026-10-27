@@ -33,18 +33,18 @@ import {
   SiRedbull,
   SiGit,
   SiGin,
-  SiRust,
 
+  SiLua,
 } from "react-icons/si";
 
 export const skillCategories = [
   {
     category: "Languages",
     skills: [
-      { name: "TypeScript", icon: SiTypescript },
       { name: "Go", icon: SiGo },
+      { name: "TypeScript", icon: SiTypescript },
       { name: "JavaScript", icon: SiJavascript },
-      { name: "Rust", icon: SiRust },
+      { name: "Lua", icon: SiLua },
       { name: "HTML5", icon: FaHtml5 },
       { name: "CSS3", icon: FaCss3Alt },
     ],

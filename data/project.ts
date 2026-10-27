@@ -1,5 +1,21 @@
 export const projects = [
   {
+    title: "FlowQ: Job Queue",
+    description:
+      "A Redis backed job queue in Go with crash recovery and batched pipelined processing.",
+    tech: [
+      "Go",
+      "Redis",
+      "Lua",
+      "Docker"
+    ],
+    live: null,
+    repo: "https://github.com/Prateet-Github/flowq",
+    image: "/flowq.png",
+    npm: null,
+  },
+  {
+
     title: "Bifrost: Search Engine",
     description:
       "A lexical search engine with inverted index, query parsing, and ranking algorithms for efficient information retrieval.",
@@ -12,21 +28,6 @@ export const projects = [
     live: null,
     repo: "https://github.com/Prateet-Github/bifrost",
     image: "/bifrost.png",
-    npm: null,
-  },
-  {
-    title: "FlowQ: Job Queue",
-    description:
-      "A Redis backed job queue in Go with crash recovery and batched pipelined processing.",
-    tech: [
-      "Go",
-      "Redis",
-      "Lua",
-      "Prometheus",
-    ],
-    live: null,
-    repo: "https://github.com/Prateet-Github/flowq",
-    image: "/flowq.png",
     npm: null,
   },
   {
